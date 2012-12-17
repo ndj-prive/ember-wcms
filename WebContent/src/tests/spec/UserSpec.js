@@ -22,7 +22,7 @@ define([
 				var user = Ember.Object.create({
 					firstName : "Molly",
 					lastName : "UnitTest",
-					emailAddress : "LaMa@openCMS.com",
+					emailAddress : "LaMa@unittest.com",
 					cellphoneNumber : "123456",
 					telephoneNumber : "654321",
 					streetAndNr : "Somewhere 8",

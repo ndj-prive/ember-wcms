@@ -1,0 +1,40 @@
+<table>
+	<tr>
+		<td><label for="pageNameInput">Name</label> (*):</td>
+		<td>{{view Ember.TextField valueBinding="currentPage.name" id="pageNameInput"}}</td>
+	</tr>
+	<tr>
+		<td><label for="pageMenuTitleInput">Menu title</label> (*):</td>
+		<td>{{view Ember.TextField valueBinding="currentPage.menuTitle" id="pageMenuTitleInput"}}</td>
+	</tr>
+	<tr>
+		<td><label for="pageIsHiddenInput">Hidden</label>:</td>
+		<td>{{view Ember.Checkbox checkedBinding="currentPage.isHidden" id="pageIsHiddenInput"}}</td>
+	</tr>
+</table>
+
+<p>
+	{{#if view.isAdding}}
+		<button {{ action "add" }}>
+		Add
+		</button>
+	{{else}}
+		<button {{ action "save" }}>
+		Save
+		</button>
+	{{/if}}
+	
+	<button {{ action "reset" }}>
+	Reset
+	</button>
+	
+	{{#if view.isAdding}}
+		<a {{ action "gotoPages" href=true }}>
+		Back
+		</a>
+	{{else}}
+		<a {{ action "gotoShow" currentPage href=true }}>
+		Back
+		</a>
+	{{/if}}
+</p>

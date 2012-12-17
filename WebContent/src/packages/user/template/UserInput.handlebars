@@ -1,0 +1,74 @@
+<table>
+	{{#if view.isAdding}}
+		<tr>
+			<td><label for="userNameInput">Name</label> (*):</td>
+			<td>{{view Ember.TextField valueBinding="currentUser.name" id="userNameInput"}}</td>
+		</tr>
+		<tr>
+			<td><label for="userPasswordInput">Password</label> (*):</td>
+			<td>{{view Ember.TextField type="password" valueBinding="currentUser.password" id="userPasswordInput"}}</td>
+		</tr>
+	{{/if}}
+	<tr>
+		<td><label for="userFirstNameInput">First name</label> (*):</td>
+		<td>{{view Ember.TextField valueBinding="currentUser.firstName" id="userFirstNameInput"}}</td>
+	</tr>
+	<tr>
+		<td><label for="userLastNameInput">Last name</label> (*):</td>
+		<td>{{view Ember.TextField valueBinding="currentUser.lastName" id="userLastNameInput"}}</td>
+	</tr>
+	<tr>
+		<td><label for="userEmailAddressInput">E-mailaddress</label> (*):</td>
+		<td>{{view Ember.TextField valueBinding="currentUser.emailAddress" id="userEmailAddressInput"}}</td>
+	</tr>
+	<tr>
+		<td><label for="userCellphoneNumberInput">Cellphone number</label> (*):</td>
+		<td>{{view Ember.TextField valueBinding="currentUser.cellphoneNumber" id="userCellphoneNumberInput"}}</td>
+	</tr>
+	<tr>
+		<td><label for="userTelephoneNumberInput">Telephone number</label>:</td>
+		<td>{{view Ember.TextField valueBinding="currentUser.telephoneNumber" id="userTelephoneNumberInput"}}</td>
+	</tr>
+	<tr>
+		<td><label for="userStreetAndNrInput">Street and number</label> (*):</td>
+		<td>{{view Ember.TextField valueBinding="currentUser.streetAndNr" id="userStreetAndNrInput"}}</td>
+	</tr>
+	<tr>
+		<td><label for="userZipCodeInput">Zipcode</label> (*):</td>
+		<td>{{view Ember.TextField valueBinding="currentUser.zipCode" id="userZipCodeInput"}}</td>
+	</tr>
+	<tr>
+		<td><label for="userCityInput">City</label> (*):</td>
+		<td>{{view Ember.TextField valueBinding="currentUser.city" id="userCityInput"}}</td>
+	</tr>
+	<tr>
+		<td><label for="userBirthDateInput">Birthdate</label> (*):</td>
+		<td>{{view Ember.TextField valueBinding="currentUser.birthDate" id="userBirthDateInput"}}</td>
+	</tr>
+</table>
+
+<p>
+	{{#if view.isAdding}}
+		<button {{ action "register" }}>
+		Register
+		</button>
+	{{else}}
+		<button {{ action "save" }}>
+		Save
+		</button>
+	{{/if}}
+	
+	<button {{ action "reset" }}>
+	Reset
+	</button>
+	
+	{{#if view.isAdding}}
+		<a {{ action "gotoUsers" href=true }}>
+		Back
+		</a>
+	{{else}}
+		<a {{ action "gotoShow" currentUser href=true }}>
+		Back
+		</a>
+	{{/if}}
+</p>

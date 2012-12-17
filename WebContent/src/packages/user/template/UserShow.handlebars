@@ -1,0 +1,50 @@
+<table>
+	<tr>
+		<td>First name:</td>
+		<td>{{currentUser.firstName}}</td>
+	</tr>
+	<tr>
+		<td>Last name:</td>
+		<td>{{currentUser.lastName}}</td>
+	</tr>
+	<tr>
+		<td>E-mailaddress:</td>
+		<td>{{currentUser.emailAddress}}</td>
+	</tr>
+	<tr>
+		<td>Cellphone number:</td>
+		<td>{{currentUser.cellphoneNumber}}</td>
+	</tr>
+	<tr>
+		<td>Telephone number:</td>
+		<td>{{currentUser.telephoneNumber}}</td>
+	</tr>
+	<tr>
+		<td>Street and number:</td>
+		<td>{{currentUser.streetAndNr}}</td>
+	</tr>
+	<tr>
+		<td>Zipcode:</td>
+		<td>{{currentUser.zipCode}}</td>
+	</tr>
+	<tr>
+		<td>City:</td>
+		<td>currentUser.city}}</td>
+	</tr>
+	<tr>
+		<td>Birthdate:</td>
+		<td>{{currentUser.birthDate}}</td>
+	</tr>
+</table>
+
+<p>
+	<a {{ action "gotoEdit" currentUser href=true }}>
+	Edit
+	</a>
+	<a {{ action "gotoDelete" currentUser href=true }}>
+	Delete
+	</a>
+	<a {{ action "gotoUsers" href=true }}>
+	Back
+	</a>
+</p>

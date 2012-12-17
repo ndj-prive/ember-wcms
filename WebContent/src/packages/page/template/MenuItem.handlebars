@@ -1,0 +1,47 @@
+{{#if view.isRenaming}}
+
+{{view view.RenameTextField valueBinding="view.content.menuTitle"}}
+
+{{else}}
+
+{{#if isLoggedIn}}
+<ul id="menuItemOptions">
+	<li>
+		<span class="optionsArrow">
+			<a></a>
+		</span>
+		<ul>
+			<li>
+				<a {{ action "gotoAdd" view.content href=true}}>
+				Add
+				</a>
+			</li>
+			<li>
+				<a {{ action "gotoEdit" view.content href=true}}>
+				Edit
+				</a>
+			</li>
+			<li>
+				<a {{ action "gotoDelete" view.content href=true}}>
+				Delete
+				</a>
+			</li>
+		</ul>
+	</li>
+</ul>
+{{/if}}
+
+<a {{ action "gotoShow" view.content href=true }}>
+{{#if view.content.isHidden}}
+*hidden*
+{{/if}}
+{{view.content.menuTitle}}
+</a>
+
+{{#if isLoggedIn}}
+<button {{ action "enableRenameMenuTitle" target="view" }}>
+=
+</button>
+{{/if}}
+
+{{/if}}

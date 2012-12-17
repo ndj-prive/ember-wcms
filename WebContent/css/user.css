@@ -1,0 +1,18 @@
+#userSearchInput {
+	float: right;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #605742;
+}
+
+#userSearchInput h1 {
+	font-size: 16pt;
+}
+
+#userSearchResult {
+	float: left;
+}
+
+#userState button {
+	margin-top: 10px;
+}

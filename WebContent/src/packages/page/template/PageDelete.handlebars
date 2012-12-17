@@ -1,0 +1,12 @@
+<p>
+Are you sure you want to delete page "{{currentPage.menuTitle}}"?
+</p>
+
+<p>
+	<button {{ action "confirm" }}>
+	Confirm
+	</button>
+	<a {{ action "gotoShow" currentPage href=true }}>
+	Back
+	</a>
+</p>

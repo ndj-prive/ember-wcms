@@ -1,0 +1,39 @@
+{{#unless isLongEnoughSearchTerm}}
+<p>
+You can search users on the right.
+</p>
+{{else}}
+	{{#if isEmptySearchResult}}
+	<p>
+	Sorry, no results found.
+	</p>
+	{{else}}
+	<table>
+		<thead>
+			<tr>
+				<th>First name</th>
+				<th>Last name</th>
+				<th>E-mailaddress</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each user in controller}}
+			<tr>
+				{{#with user}}
+					<td>{{firstName}}</td>
+					<td>{{lastName}}</td>
+					<td>{{emailAddress}}</td>
+				{{/with}}
+	
+				<td>
+					<a {{ action "gotoShow" user href=true}}>
+					show
+					</a>
+				</td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+	{{/if}}
+{{/unless}}

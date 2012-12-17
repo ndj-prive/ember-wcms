@@ -1,0 +1,13 @@
+{{#if isLoggedIn}}
+<ul>
+	<li>
+		<span class="optionsArrow">
+			<a></a>
+		</span>
+		<ul>
+			<li><a {{action gotoPages href=true}}>Pages</a></li>
+			<li><a {{action gotoUsers href=true}}>Users</a></li>
+		</ul>
+	</li>
+</ul>
+{{/if}}

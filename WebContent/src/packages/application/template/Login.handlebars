@@ -1,0 +1,21 @@
+{{#if isLoggedIn}}
+<p>Welcome, {{name}}</p>
+<button {{ action "logout" }}>Logout</button>
+
+{{else}}
+
+{{#unless isValidLogin}}
+<div id="inValidLogin">Login not successful</div>
+{{/unless}}
+
+<div id="loginInput">
+	<label for="loginName">name: </label>
+	{{view view.LoginTextField valueBinding="name" id="loginName" }}
+	<label for="loginPassword">password: </label>
+	{{view view.LoginTextField type="password" valueBinding="password" id="loginPassword"}}
+
+	<button {{ action "login" }}>
+	Login
+	</button>
+</div>
+{{/if}}

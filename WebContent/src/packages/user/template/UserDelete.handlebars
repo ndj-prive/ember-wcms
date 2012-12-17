@@ -1,0 +1,12 @@
+<p>
+Are you sure you want to delete user "{{currentUser.firstName}} {{currentUser.lastName}}"?
+</p>
+
+<p>
+	<button {{ action "confirm" }}>
+	Confirm
+	</button>
+	<a {{ action "gotoShow" currentUser href=true }}>
+	Back
+	</a>
+</p>

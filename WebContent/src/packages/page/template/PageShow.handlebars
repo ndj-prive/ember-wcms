@@ -1,0 +1,19 @@
+{{#if isLoggedIn}}
+
+<div id="pageContentEditor" contenteditable="true">
+{{{unbound currentPage.content}}}
+</div>
+
+<div id="pageSave">
+	<button {{ action "save" target="view" }}>
+	Save
+	</button>
+</div>
+
+{{else}}
+
+<div id="pageContentEditor">
+{{{currentPage.content}}}
+</div>
+
+{{/if}}

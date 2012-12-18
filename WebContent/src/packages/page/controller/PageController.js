@@ -80,10 +80,24 @@ define([
 			self = this;
 			page = this.get("currentPage");
 
+			// TODO: Fix voor asynchroon toevoegen van pagina! Met
+			// Ember-Data zou dit opgelost moeten zijn
+			Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
+			Ember.$.ajaxSetup({
+				async : false
+			});
+
 			Ember.$.couch.db("pages").removeDoc(page, {
 				success : function (data) {
 					self.removeObject(page);
 				}
+			});
+
+			// TODO: Fix voor asynchroon toevoegen van pagina! Met
+			// Ember-Data zou dit opgelost moeten zijn
+			Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
+			Ember.$.ajaxSetup({
+				async : true
 			});
 		},
 		showPage : function (page) {
@@ -124,7 +138,7 @@ define([
 
 			return rootPageArray[0].get("children");
 		}.property("isLoggedIn", "content.@each.isHidden"),
-		rootPage : function() {
+		rootPage : function () {
 			return this.findProperty("name", "root");
 		}.property("content.@each.name"),
 		getIndexPage : function () {

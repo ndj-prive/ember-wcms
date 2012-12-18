@@ -1,12 +1,15 @@
-<p>
-Are you sure you want to delete page "{{currentPage.menuTitle}}"?
-</p>
-
-<p>
+{{#if currentPage.children}}
+	<p>You can not delete a parent page containing children!</p>
+{{else}}
+	<p>
+	Are you sure you want to delete page "{{currentPage.menuTitle}}"?
+	</p>
+	
 	<button {{ action "confirm" }}>
 	Confirm
 	</button>
-	<a {{ action "gotoShow" currentPage href=true }}>
-	Back
-	</a>
-</p>
+{{/if}}
+
+<a {{ action "gotoShow" currentPage href=true }}>
+Back
+</a>

@@ -97,16 +97,36 @@ define([
 
 			self.set("currentPage", page);
 		},
-		// TODO: Deze code hoort in de view?
 		visiblePages : function () {
-			var visiblePages = this.get("content");
+			var visiblePages, rootPageArray, initChildrenRecursively;
+
+			visiblePages = this.get("content");
 
 			if (!this.get("isLoggedIn")) {
 				visiblePages = this.filterProperty("isHidden", false);
 			}
 
-			return visiblePages;
+			rootPageArray = visiblePages.filterProperty("parent", null);
+
+			initChildrenRecursively = function (pages, pageList) {
+				var i, page, children;
+
+				for (i = 0; i < pages.length; i += 1) {
+					page = pages[i];
+					children = pageList.filterProperty("parent", page.get("_id"));
+					page.set("children", children);
+
+					initChildrenRecursively(children, pageList);
+				}
+			};
+
+			initChildrenRecursively(rootPageArray, visiblePages);
+
+			return rootPageArray[0].get("children");
 		}.property("isLoggedIn", "content.@each.isHidden"),
+		rootPage : function() {
+			return this.findProperty("name", "root");
+		}.property("content.@each.name"),
 		getIndexPage : function () {
 			return this.findProperty("name", "index");
 		},

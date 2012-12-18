@@ -4,13 +4,25 @@ define([
 	"use strict";
 
 	return Ember.Route.extend({
-		route : "/add",
-		connectOutlets : function (router) {
+		route : "/:id/add",
+		deserialize : function (router, context) {
+			return router.get("pageController").findPage(context.id);
+		},
+		serialize : function (router, context) {
+			return {
+				id : context._id
+			};
+		},
+		parentPage : null,
+		connectOutlets : function (router, context) {
+			this.set("parentPage", context);
+
 			router.get("pageController").set("currentPage", Ember.Object.create({
 				content : "<p>Edit me!</p>",
 				menuTitle : "",
 				name : "",
-				isHidden : false
+				isHidden : false,
+				parent : this.get("parentPage._id")
 			}));
 
 			router.get("pageController").connectOutlet({
@@ -38,7 +50,8 @@ define([
 				content : "<p>Edit me!</p>",
 				menuTitle : "",
 				name : "",
-				isHidden : false
+				isHidden : false,
+				parent : this.get("parentPage._id")
 			}));
 
 			Ember.$.validity.clear();

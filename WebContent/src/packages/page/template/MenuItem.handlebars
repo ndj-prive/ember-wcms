@@ -45,3 +45,7 @@
 {{/if}}
 
 {{/if}}
+
+{{#if view.content.children}}
+	{{view view.parentView.constructor contentBinding="view.content.children"}}
+{{/if}}

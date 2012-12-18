@@ -11,6 +11,11 @@
 		<td><label for="pageIsHiddenInput">Hidden</label>:</td>
 		<td>{{view Ember.Checkbox checkedBinding="currentPage.isHidden" id="pageIsHiddenInput"}}</td>
 	</tr>
+	<tr>
+		<td><label for="pageParentInput">Parent page</label>:</td>
+		<td>{{view Ember.Select contentBinding="controller.otherPages" valueBinding="currentPage.parent" optionValuePath="content._id"
+       optionLabelPath="content.menuTitle"}}</td>
+	</tr>
 </table>
 
 <p>

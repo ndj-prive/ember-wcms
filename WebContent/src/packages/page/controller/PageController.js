@@ -72,6 +72,9 @@ define([
 				page = this.get("currentPage");
 			}
 
+			// TODO: Delete children pages property so it doesn't get saved to
+			// the database
+			delete page.children;
 			Ember.$.couch.db("pages").saveDoc(page);
 		},
 		deletePage : function () {
@@ -137,7 +140,15 @@ define([
 			initChildrenRecursively(rootPageArray, visiblePages);
 
 			return rootPageArray[0].get("children");
-		}.property("isLoggedIn", "content.@each.isHidden"),
+		}.property("isLoggedIn", "content.@each.isHidden", "content.@each.parent"),
+		otherPages : function () {
+			var self, otherPages;
+			self = this;
+			otherPages = this.get("content").filter(function (page) {
+				return page.get("_id") !== self.get("currentPage._id");
+			});
+			return otherPages;
+		}.property("content", "currentPage"),
 		rootPage : function () {
 			return this.findProperty("name", "root");
 		}.property("content.@each.name"),

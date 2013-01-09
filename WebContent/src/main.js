@@ -18,6 +18,7 @@
 			jQueryUI : "lib/jquery/js/jquery-ui-1.9.2.custom",
 			jQueryValidity : "lib/jquery/js/jquery.validity",
 			jQueryCouch : "lib/jquery/js/jquery.couch",
+			Bootstrap : "lib/bootstrap/js/bootstrap",
 
 			Editor : "lib/ckeditor/ckeditor",
 
@@ -130,9 +131,12 @@
 				],
 				exports : "jQuery"
 			},
+			"Bootstrap" : {
+				exports : "jQuery"
+			},
 			"Ember" : {
 				deps : [
-					"jQuery", "Handlebars", "jQueryUI", "jQueryValidity", "jQueryCouch"
+					"jQuery", "Handlebars", "Bootstrap", "jQueryUI", "jQueryValidity", "jQueryCouch"
 				],
 				exports : "Ember"
 			},

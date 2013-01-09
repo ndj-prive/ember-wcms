@@ -7,31 +7,6 @@ table {
 	color: #605742;
 }
 
-input[type=text],input[type=password] {
-	width: 140px;
-	border: 1px solid #736749;
-	height: 20px;
-	background-color: #B1A37E;
-	color: white;
-}
-
-a {
-	color: #68521E;
-}
-
-a:hover {
-	color: #978F7C;
-}
-
-label {
-	color: #7D7257;
-}
-
-button {
-	height: 25px;
-	width: 80px;
-}
-
 body {
 	text-align: center;
 	font-size: 1em;
@@ -70,73 +45,8 @@ body {
 	margin-top: 10px;
 }
 
-#adminNavigation ul,#menuItemOptions ul {
-	list-style: none;
-	font-size: 10pt;
-	background-color: #f5f2ed;
-	color: #7D7257;
-}
-
-#adminNavigation ul li,#menuItemOptions ul li {
-	display: block;
-	position: relative;
-	float: left;
-}
-
-#adminNavigation li ul {
-	display: none;
-	border: 2px solid #635433;
-	margin-top: -20px;
-	margin-left: -20px;
-}
-
-#menuItemOptions li ul {
-	display: none;
-	border: 2px solid #635433;
-	margin-top: -50px;
-	margin-left: -20px;
-}
-
-#menuItemOptions li ul li {
-	width: 100%;
-}
-
-#adminNavigation ul li a,#menuItemOptions ul li a {
-	display: block;
-	color: #7D7257;
-	margin-left: 1px;
-	text-decoration: none;
-	padding: 5px 15px 5px 15px;
-	white-space: nowrap
-}
-
-#adminNavigation li:active ul,#menuItemOptions li:active ul {
-	display: block;
-	position: absolute;
-	display: inline-block;
-}
-
-#adminNavigation li ul:hover,#menuItemOptions li ul:hover {
-	display: block;
-	position: absolute;
-	display: inline-block;
-}
-
-#adminNavigation li ul li:hover,#menuItemOptions li ul li:hover {
-	clear: left;
-	background-color: #B6AA90;
-	width: 100%;
-}
-
-#adminNavigation li ul li:hover a,#menuItemOptions li ul li:hover a {
-	clear: left;
-	color: white;
-	width: 100%;
-}
-
 #menuItemOptions {
 	float: left;
-	height: 2px;
 }
 
 #footer {
@@ -150,13 +60,6 @@ body {
 #loading {
 	height: 19px;
 	text-align: center;
-}
-
-.optionsArrow a {
-	width: 16px;
-	height: 16px;
-	background-image: url('../img/bullet-arrow-down.png');
-	background-repeat: no-repeat;
 }
 
 .loadingBar {

@@ -1,6 +1,6 @@
 {{#if isLoggedIn}}
 <p>Welcome, {{name}}</p>
-<button {{ action "logout" }}>Logout</button>
+<button class="btn" {{ action "logout" }}>Logout</button>
 
 {{else}}
 
@@ -8,13 +8,13 @@
 <div id="inValidLogin">Login not successful</div>
 {{/unless}}
 
-<div id="loginInput">
-	<label for="loginName">name: </label>
+<div id="loginInput" class="form-inline">
+	<label for="loginName" class="control-label">name: </label>
 	{{view view.LoginTextField valueBinding="name" id="loginName" }}
-	<label for="loginPassword">password: </label>
+	<label for="loginPassword" class="control-label">password: </label>
 	{{view view.LoginTextField type="password" valueBinding="password" id="loginPassword"}}
 
-	<button {{ action "login" }}>
+	<button class="btn" {{ action "login" }}>
 	Login
 	</button>
 </div>

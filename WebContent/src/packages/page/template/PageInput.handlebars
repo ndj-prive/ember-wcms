@@ -20,25 +20,25 @@
 
 <p>
 	{{#if view.isAdding}}
-		<button {{ action "add" }}>
+		<button class="btn btn-primary" {{ action "add" }}>
 		Add
 		</button>
 	{{else}}
-		<button {{ action "save" }}>
+		<button class="btn btn-primary" {{ action "save" }}>
 		Save
 		</button>
 	{{/if}}
 	
-	<button {{ action "reset" }}>
+	<button class="btn" {{ action "reset" }}>
 	Reset
 	</button>
 	
 	{{#if view.isAdding}}
-		<a {{ action "gotoPages" href=true }}>
+		<a class="btn" {{ action "gotoPages" href=true }}>
 		Back
 		</a>
 	{{else}}
-		<a {{ action "gotoShow" currentPage href=true }}>
+		<a class="btn" {{ action "gotoShow" currentPage href=true }}>
 		Back
 		</a>
 	{{/if}}

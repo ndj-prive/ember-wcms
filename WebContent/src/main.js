@@ -132,6 +132,9 @@
 				exports : "jQuery"
 			},
 			"Bootstrap" : {
+				deps : [
+					"jQuery"
+				],
 				exports : "jQuery"
 			},
 			"Ember" : {

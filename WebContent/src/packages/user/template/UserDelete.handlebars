@@ -3,10 +3,10 @@ Are you sure you want to delete user "{{currentUser.firstName}} {{currentUser.la
 </p>
 
 <p>
-	<button {{ action "confirm" }}>
+	<button class="btn btn-primary" {{ action "confirm" }}>
 	Confirm
 	</button>
-	<a {{ action "gotoShow" currentUser href=true }}>
+	<a class="btn" {{ action "gotoShow" currentUser href=true }}>
 	Back
 	</a>
 </p>

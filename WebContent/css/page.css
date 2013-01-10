@@ -45,7 +45,6 @@
 
 .menuItems>li {
 	padding-top: 5px;
-	font-size: 10pt;
 }
 
 .menuItems>li>.dropdown {
@@ -55,6 +54,7 @@
 
 .menuItems>li>a {
 	color: #181101;
+	font-size: 10pt;
 }
 
 .menuItems>li>a:hover {

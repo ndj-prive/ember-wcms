@@ -5658,7 +5658,6 @@ body {
 }
 .menuItems>li {
 	padding-top: 5px;
-	font-size: 10pt;
 }
 .menuItems>li>.dropdown {
 	float: right;
@@ -5666,6 +5665,7 @@ body {
 }
 .menuItems>li>a {
 	color: #181101;
+	font-size: 10pt;
 }
 .menuItems>li>a:hover {
 	color: #6F571C;

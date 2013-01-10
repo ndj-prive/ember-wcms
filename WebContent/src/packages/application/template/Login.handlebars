@@ -11,8 +11,13 @@ Welcome, {{name}}
 	<p class="text-error">Login not successful</p>
 	{{/unless}}
 	
+	<!--[if lt IE 10]><label>name:<![endif]-->
 	{{view view.LoginTextField valueBinding="name" placeholder="name" classNames="input-small"}}
+	<!--[if lt IE 10]></label><![endif]-->
+	
+	<!--[if lt IE 10]><label>password:<![endif]-->
 	{{view view.LoginTextField type="password" valueBinding="password" placeholder="password" classNames="input-small"}}
+	<!--[if lt IE 10]></label><![endif]-->
 
 	<button class="btn btn-small" {{ action "login" }}>
 	Login

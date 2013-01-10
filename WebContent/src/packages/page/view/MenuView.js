@@ -6,6 +6,7 @@ define([
 	return Ember.CollectionView.extend({
 		contentBinding : "controller.visiblePages",
 		itemViewClass : MenuItemView,
-		tagName : "ul"
+		tagName : "ul",
+		classNames: ["pageMenuView"]
 	});
 });

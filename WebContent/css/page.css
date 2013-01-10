@@ -57,10 +57,9 @@
     list-style-type: none;
 }
 
-/* TODO: padding wordt recursief toegevoegd, mag niet! */
-.verticalMenu li
+.pageMenuView > li
 {
-    padding: 5px;
+    padding-top: 5px;
 }
 
 .verticalMenu .dropdown

@@ -6,11 +6,11 @@ Welcome, {{name}}
 
 {{else}}
 
-{{#unless isValidLogin}}
-<div class="text-error">Login not successful</div>
-{{/unless}}
-
-<div id="loginInput" class="form-inline">
+<div class="form-inline">
+	{{#unless isValidLogin}}
+	<div class="text-error">Login not successful</div>
+	{{/unless}}
+	
 	<label for="loginName" class="control-label">name</label>
 	{{view view.LoginTextField valueBinding="name" id="loginName" }}
 	<label for="loginPassword" class="control-label">password</label>
@@ -20,4 +20,5 @@ Welcome, {{name}}
 	Login
 	</button>
 </div>
+
 {{/if}}

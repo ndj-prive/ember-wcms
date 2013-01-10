@@ -14,11 +14,11 @@
 {{#if isLoggedIn}}
 
 <div class="dropdown">
-	<button class="btn btn-mini btn-link dropdown-toggle" id="menuItemOptionsDropdown" data-toggle="dropdown">
+	<button class="btn btn-mini btn-link dropdown-toggle" {{bindAttr id="view.dropDownId"}} data-toggle="dropdown">
 		<span class="caret"></span>
 	</button>
 
-	<ul class="dropdown-menu" role="menu" aria-labelledby="menuItemOptionsDropdown">
+	<ul class="dropdown-menu" role="menu" {{bindAttr aria-labelledby="view.dropDownId"}}">
 		<li>
 			<a href="" {{ action "enableRenameMenuTitle" target="view" }}>
 			Rename

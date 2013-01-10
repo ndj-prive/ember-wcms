@@ -4,8 +4,6 @@
 
 {{else}}
 
-{{#if isLoggedIn}}
-
 <a {{ action "gotoShow" view.content href=true }}>
 {{#if view.content.isHidden}}
 *hidden*
@@ -13,10 +11,12 @@
 {{view.content.menuTitle}}
 </a>
 
+{{#if isLoggedIn}}
+
 <div class="dropdown">
-	<button class="btn btn-mini btn-link dropdown-toggle" id="menuItemOptionsDropdown" data-toggle="dropdown">
+	<a class="btn btn-mini btn-link dropdown-toggle" id="menuItemOptionsDropdown" data-toggle="dropdown" href="">
 		<span class="caret"></span>
-	</button>
+	</a>
 
 	<ul class="dropdown-menu" role="menu" aria-labelledby="menuItemOptionsDropdown">
 		<li>

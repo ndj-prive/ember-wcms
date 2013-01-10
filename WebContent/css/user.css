@@ -1,9 +1,9 @@
 #userSearchInput {
 	float: right;
 	margin-top: 20px;
-	margin-bottom: 20px;
 }
 
 #userSearchResult {
 	float: left;
+	margin-top: 20px;
 }

@@ -9,6 +9,9 @@ define([
 		enableRenameMenuTitle : function () {
 			this.set("isRenaming", true);
 		},
+		dropDownId : function () {
+			return "dropdown-" + this.get("content._id");
+		}.property("content._id"),
 		RenameTextField : Ember.TextField.extend({
 			didInsertElement : function () {
 				this._super();

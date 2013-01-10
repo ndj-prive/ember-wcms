@@ -54,3 +54,13 @@
 	float: right;
 	display: inline;
 }
+#sidebar ul li a{
+	color:#7D7257;
+}
+
+#sidebar ul li a:hover {
+	color:#736749;
+	text-decoration: none;
+	font-weight: bold;
+}
+

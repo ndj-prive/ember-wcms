@@ -52,16 +52,22 @@ body {
 	height: 19px;
 /* 	TODO: Overbodig? */
 	text-align: center;
+	margin-left:-220px;
 }
 
 .loadingBar {
 	width: 220px;
 	height: 19px;
+	margin:0 auto;
 	background-image: url('../img/loadingBar.gif');
 	background-repeat: no-repeat;
 }
 
 /* TODO: Temporary fix where first control-group in a form is too because for some reason. */
 .control-group {
-	height: 30px;
+	max-height: 30px;
+}
+
+.text-error{
+	margin-right: -80px;
 }

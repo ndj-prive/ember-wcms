@@ -5,30 +5,6 @@
 {{else}}
 
 {{#if isLoggedIn}}
-<div class="dropdown">
-	<a class="dropdown-toggle" id="menuItemOptionsDropdown" role="button" data-toggle="dropdown" data-target="#" href="#">
-		<span class="caret"></span>
-	</a>
-
-	<ul class="dropdown-menu" role="menu" aria-labelledby="menuItemOptionsDropdown">
-		<li>
-			<a {{ action "gotoAdd" view.content href=true}}>
-			Add
-			</a>
-		</li>
-		<li>
-			<a {{ action "gotoEdit" view.content href=true}}>
-			Edit
-			</a>
-		</li>
-		<li>
-			<a {{ action "gotoDelete" view.content href=true}}>
-			Delete
-			</a>
-		</li>
-	</ul>
-</div>
-{{/if}}
 
 <a {{ action "gotoShow" view.content href=true }}>
 {{#if view.content.isHidden}}
@@ -37,10 +13,34 @@
 {{view.content.menuTitle}}
 </a>
 
-{{#if isLoggedIn}}
-<button class="btn" {{ action "enableRenameMenuTitle" target="view" }}>
-|
-</button>
+<div class="dropdown">
+	<button class="btn btn-mini btn-link dropdown-toggle" id="menuItemOptionsDropdown" data-toggle="dropdown">
+		<span class="caret"></span>
+	</button>
+
+	<ul class="dropdown-menu" role="menu" aria-labelledby="menuItemOptionsDropdown">
+		<li>
+			<a href="" {{ action "enableRenameMenuTitle" target="view" }}>
+			Rename
+			</a>
+		</li>
+		<li>
+			<a {{ action "gotoAdd" view.content href=true }}>
+			Add
+			</a>
+		</li>
+		<li>
+			<a {{ action "gotoEdit" view.content href=true }}>
+			Edit
+			</a>
+		</li>
+		<li>
+			<a {{ action "gotoDelete" view.content href=true }}>
+			Delete
+			</a>
+		</li>
+	</ul>
+</div>
 {{/if}}
 
 {{/if}}

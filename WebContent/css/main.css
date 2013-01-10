@@ -1,3 +1,10 @@
+/* libs */
+@import url("../lib/jquery/css/jquery-ui-1.9.2.custom.css");
+
+@import url("../lib/jquery/css/jquery.validity.css");
+
+@import url("../lib/bootstrap/css/bootstrap.css");
+
 /* packages */
 @import url("application.css");
 
@@ -6,10 +13,3 @@
 @import url("page.css");
 
 @import url("user.css");
-
-/* libs */
-@import url("../lib/jquery/css/jquery-ui-1.9.2.custom.css");
-
-@import url("../lib/jquery/css/jquery.validity.css");
-
-@import url("../lib/bootstrap/css/bootstrap.css");

@@ -1,52 +1,50 @@
-<div class="form-horizontal">
-	<div class="control-group">
-		<strong >First name:</strong>
+<div>
+	<p>
+		<strong>First name:</strong>
 		{{currentUser.firstName}}
-	</div>
-	<div class="control-group">
-		<strong >Last name:</strong>
+	</p>
+	<p>
+		<strong>Last name:</strong>
 		{{currentUser.lastName}}
-	</div>
-	<div class="control-group">
-		<strong >E-mailaddress:</strong>
+	</p>
+	<p>
+		<strong>E-mailaddress:</strong>
 		{{currentUser.emailAddress}}
-	</div>
-	<div class="control-group">
-		<strong >Cellphone number:</strong>
+	</p>
+	<p>
+		<strong>Cellphone number:</strong>
 		{{currentUser.cellphoneNumber}}
-	</div>
-	<div class="control-group">
-		<strong >Telephone number:</strong>
+	</p>
+	<p>
+		<strong>Telephone number:</strong>
 		{{currentUser.telephoneNumber}}
-	</div>
-	<div class="control-group">
-		<strong >Street and number:</strong>
+	</p>
+	<p>
+		<strong>Street and number:</strong>
 		{{currentUser.streetAndNr}}
-	</div>
-	<div class="control-group">
-		<strong >Zipcode:</strong>
+	</p>
+	<p>
+		<strong>Zipcode:</strong>
 		{{currentUser.zipCode}}
-	</div>
-	<div class="control-group">
-		<strong >City:</strong>
+	</p>
+	<p>
+		<strong>City:</strong>
 		{{currentUser.city}}
-	</div>
-	<div class="control-group">
-		<strong >Birthdate:</strong>
+	</p>
+	<p>
+		<strong>Birthdate:</strong>
 		{{currentUser.birthDate}}
-	</div>
+	</p>
 
-	<div class="control-group">
-		<div class="controls">
-			<a class="btn btn-primary" {{ action "gotoEdit" currentUser href=true }}>
-			Edit
-			</a>
-			<a class="btn btn-primary" {{ action "gotoDelete" currentUser href=true }}>
-			Delete
-			</a>
-			<a class="btn" {{ action "gotoUsers" href=true }}>
-			Back
-			</a>
-		</div>
+	<div class="controls">
+		<a class="btn btn-primary" {{ action "gotoEdit" currentUser href=true }}>
+		Edit
+		</a>
+		<a class="btn btn-primary" {{ action "gotoDelete" currentUser href=true }}>
+		Delete
+		</a>
+		<a class="btn" {{ action "gotoUsers" href=true }}>
+		Back
+		</a>
 	</div>
 </div>

@@ -5,10 +5,10 @@
 {{else}}
 
 <a {{ action "gotoShow" view.content href=true }}>
-{{#if view.content.isHidden}}
-*hidden*
-{{/if}}
 {{view.content.menuTitle}}
+{{#if view.content.isHidden}}
+[hidden]
+{{/if}}
 </a>
 
 {{#if isLoggedIn}}

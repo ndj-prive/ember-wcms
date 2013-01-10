@@ -50,8 +50,6 @@ body {
 
 #loading {
 	height: 19px;
-	/* 	TODO: Overbodig? */
-	text-align: center;
 	margin-left: -220px;
 }
 

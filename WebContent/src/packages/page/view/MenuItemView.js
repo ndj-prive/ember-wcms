@@ -5,9 +5,6 @@ define([
 
 	return Ember.View.extend({
 		template : Ember.Handlebars.compile(template),
-		classNames : [
-			"menuItem"
-		],
 		isRenaming : false,
 		enableRenameMenuTitle : function () {
 			this.set("isRenaming", true);
@@ -34,7 +31,10 @@ define([
 				this.get("controller.target").send("saveRenameMenuTitle", event);
 
 				view.set("isRenaming", false);
-			}
+			},
+			classNames : [
+				"input-small"
+			]
 		})
 	});
 });

@@ -45,6 +45,7 @@
 
 .menuItems>li {
 	padding-top: 5px;
+	font-size: 10pt;
 }
 
 .menuItems>li>.dropdown {

@@ -68,7 +68,7 @@ body {
 
 /* TODO: Temporary fix where first control-group in a form is too because for some reason. */
 .control-group {
-	max-height: 30px;
+	height: 30px;
 }
 
 .text-error{

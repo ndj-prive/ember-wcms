@@ -8,13 +8,11 @@ Welcome, {{name}}
 
 <div class="form-inline">
 	{{#unless isValidLogin}}
-	<div class="text-error">Login not successful</div>
+	<p class="text-error">Login not successful</p>
 	{{/unless}}
 	
-	<label for="loginName" class="control-label">name</label>
-	{{view view.LoginTextField valueBinding="name" id="loginName" }}
-	<label for="loginPassword" class="control-label">password</label>
-	{{view view.LoginTextField type="password" valueBinding="password" id="loginPassword"}}
+	{{view view.LoginTextField valueBinding="name" placeholder="name" classNames="input-small"}}
+	{{view view.LoginTextField type="password" valueBinding="password" placeholder="password" classNames="input-small"}}
 
 	<button class="btn btn-small" {{ action "login" }}>
 	Login

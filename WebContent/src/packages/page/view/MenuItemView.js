@@ -34,10 +34,7 @@ define([
 				this.get("controller.target").send("saveRenameMenuTitle", event);
 
 				view.set("isRenaming", false);
-			},
-			classNames : [
-				"input-small"
-			]
+			}
 		})
 	});
 });

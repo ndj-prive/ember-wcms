@@ -39,28 +39,24 @@
 	margin-left: 25px;
 }
 
-.menuItems
-{
-    list-style-type: none;
+.menuItems {
+	list-style-type: none;
 }
 
-.menuItems > li
-{
-    padding-top: 5px;
+.menuItems>li {
+	padding-top: 5px;
 }
 
-.menuItems > li > .dropdown
-{
+.menuItems>li>.dropdown {
 	float: right;
 	display: inline;
 }
-#sidebar ul li a{
-	color:#7D7257;
+
+.menuItems>li>a {
+	color: #7D7257;
 }
 
-#sidebar ul li a:hover {
-	color:#736749;
+.menuItems>li>a:hover {
+	color: #736749;
 	text-decoration: none;
-	font-weight: bold;
 }
-

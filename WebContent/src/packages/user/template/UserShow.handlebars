@@ -1,50 +1,52 @@
-<table>
-	<tr>
-		<td>First name:</td>
-		<td>{{currentUser.firstName}}</td>
-	</tr>
-	<tr>
-		<td>Last name:</td>
-		<td>{{currentUser.lastName}}</td>
-	</tr>
-	<tr>
-		<td>E-mailaddress:</td>
-		<td>{{currentUser.emailAddress}}</td>
-	</tr>
-	<tr>
-		<td>Cellphone number:</td>
-		<td>{{currentUser.cellphoneNumber}}</td>
-	</tr>
-	<tr>
-		<td>Telephone number:</td>
-		<td>{{currentUser.telephoneNumber}}</td>
-	</tr>
-	<tr>
-		<td>Street and number:</td>
-		<td>{{currentUser.streetAndNr}}</td>
-	</tr>
-	<tr>
-		<td>Zipcode:</td>
-		<td>{{currentUser.zipCode}}</td>
-	</tr>
-	<tr>
-		<td>City:</td>
-		<td>currentUser.city}}</td>
-	</tr>
-	<tr>
-		<td>Birthdate:</td>
-		<td>{{currentUser.birthDate}}</td>
-	</tr>
-</table>
+<div class="form-horizontal">
+	<div class="control-group">
+		First name:
+		{{currentUser.firstName}}
+	</div>
+	<div class="control-group">
+		Last name:
+		{{currentUser.lastName}}
+	</div>
+	<div class="control-group">
+		E-mailaddress:
+		{{currentUser.emailAddress}}
+	</div>
+	<div class="control-group">
+		Cellphone number:
+		{{currentUser.cellphoneNumber}}
+	</div>
+	<div class="control-group">
+		Telephone number:
+		{{currentUser.telephoneNumber}}
+	</div>
+	<div class="control-group">
+		Street and number:
+		{{currentUser.streetAndNr}}
+	</div>
+	<div class="control-group">
+		Zipcode:
+		{{currentUser.zipCode}}
+	</div>
+	<div class="control-group">
+		City:
+		{{currentUser.city}}
+	</div>
+	<div class="control-group">
+		Birthdate:
+		{{currentUser.birthDate}}
+	</div>
 
-<p>
-	<a class="btn btn-primary" {{ action "gotoEdit" currentUser href=true }}>
-	Edit
-	</a>
-	<a class="btn btn-primary" {{ action "gotoDelete" currentUser href=true }}>
-	Delete
-	</a>
-	<a class="btn" {{ action "gotoUsers" href=true }}>
-	Back
-	</a>
-</p>
+	<div class="control-group">
+		<div class="controls">
+			<a class="btn btn-primary" {{ action "gotoEdit" currentUser href=true }}>
+			Edit
+			</a>
+			<a class="btn btn-primary" {{ action "gotoDelete" currentUser href=true }}>
+			Delete
+			</a>
+			<a class="btn" {{ action "gotoUsers" href=true }}>
+			Back
+			</a>
+		</div>
+	</div>
+</div>

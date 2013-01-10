@@ -35,11 +35,6 @@ body {
 	display: inline;
 }
 
-#content-inner {
-	margin-top: 20px;
-	padding: 1px 0;
-}
-
 #adminNavigation {
 	float: right;
 	margin-top: 10px;

@@ -1164,6 +1164,7 @@ __private = {
             // Otherwize create a new one and stick it after the input:
             else {
                 $("<label/>")
+                	.addClass("help-inline")
                     .attr("for", getIdentifier($obj))
                     .addClass($.validity.outputs.label.cssClass)
                     .text(msg)

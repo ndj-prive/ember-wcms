@@ -1,5 +1,8 @@
 {{#if isLoggedIn}}
-<p>Welcome, {{name}}</p>
+
+<p>
+Welcome, {{name}}
+</p>
 <button class="btn" {{ action "logout" }}>Logout</button>
 
 {{else}}
@@ -9,9 +12,9 @@
 {{/unless}}
 
 <div id="loginInput" class="form-inline">
-	<label for="loginName" class="control-label">name: </label>
+	<label for="loginName" class="control-label">name</label>
 	{{view view.LoginTextField valueBinding="name" id="loginName" }}
-	<label for="loginPassword" class="control-label">password: </label>
+	<label for="loginPassword" class="control-label">password</label>
 	{{view view.LoginTextField type="password" valueBinding="password" id="loginPassword"}}
 
 	<button class="btn" {{ action "login" }}>

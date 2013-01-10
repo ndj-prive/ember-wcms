@@ -1,12 +1,10 @@
 {{#if isLoggedIn}}
 <div class="dropdown">
-	<a class="dropdown-toggle" id="adminNavigationDropdown" role="button"
-		data-toggle="dropdown" data-target="#" href="#">
+	<a class="dropdown-toggle" id="adminNavigationDropdown" role="button" data-toggle="dropdown" data-target="#" href="#">
 		<span class="caret"></span>
 	</a>
 
-	<ul class="dropdown-menu" role="menu"
-		aria-labelledby="adminNavigationDropdown">
+	<ul class="dropdown-menu" role="menu" aria-labelledby="adminNavigationDropdown">
 		<li><a {{action gotoPages href=true}}>Pages</a></li>
 		<li><a {{action gotoUsers href=true}}>Users</a></li>
 	</ul>

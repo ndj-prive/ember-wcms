@@ -1,74 +1,99 @@
-<table>
+<div class="form-horizontal">
 	{{#if view.isAdding}}
-		<tr>
-			<td><label for="userNameInput">Name</label> (*):</td>
-			<td>{{view Ember.TextField valueBinding="currentUser.name" id="userNameInput"}}</td>
-		</tr>
-		<tr>
-			<td><label for="userPasswordInput">Password</label> (*):</td>
-			<td>{{view Ember.TextField type="password" valueBinding="currentUser.password" id="userPasswordInput"}}</td>
-		</tr>
-	{{/if}}
-	<tr>
-		<td><label for="userFirstNameInput">First name</label> (*):</td>
-		<td>{{view Ember.TextField valueBinding="currentUser.firstName" id="userFirstNameInput"}}</td>
-	</tr>
-	<tr>
-		<td><label for="userLastNameInput">Last name</label> (*):</td>
-		<td>{{view Ember.TextField valueBinding="currentUser.lastName" id="userLastNameInput"}}</td>
-	</tr>
-	<tr>
-		<td><label for="userEmailAddressInput">E-mailaddress</label> (*):</td>
-		<td>{{view Ember.TextField valueBinding="currentUser.emailAddress" id="userEmailAddressInput"}}</td>
-	</tr>
-	<tr>
-		<td><label for="userCellphoneNumberInput">Cellphone number</label> (*):</td>
-		<td>{{view Ember.TextField valueBinding="currentUser.cellphoneNumber" id="userCellphoneNumberInput"}}</td>
-	</tr>
-	<tr>
-		<td><label for="userTelephoneNumberInput">Telephone number</label>:</td>
-		<td>{{view Ember.TextField valueBinding="currentUser.telephoneNumber" id="userTelephoneNumberInput"}}</td>
-	</tr>
-	<tr>
-		<td><label for="userStreetAndNrInput">Street and number</label> (*):</td>
-		<td>{{view Ember.TextField valueBinding="currentUser.streetAndNr" id="userStreetAndNrInput"}}</td>
-	</tr>
-	<tr>
-		<td><label for="userZipCodeInput">Zipcode</label> (*):</td>
-		<td>{{view Ember.TextField valueBinding="currentUser.zipCode" id="userZipCodeInput"}}</td>
-	</tr>
-	<tr>
-		<td><label for="userCityInput">City</label> (*):</td>
-		<td>{{view Ember.TextField valueBinding="currentUser.city" id="userCityInput"}}</td>
-	</tr>
-	<tr>
-		<td><label for="userBirthDateInput">Birthdate</label> (*):</td>
-		<td>{{view Ember.TextField valueBinding="currentUser.birthDate" id="userBirthDateInput"}}</td>
-	</tr>
-</table>
+	<div class="control-group">
+		<label for="userNameInput" class="control-label">Name (*)</label>
+		<div class="controls">
+		{{view Ember.TextField valueBinding="currentUser.name" id="userNameInput"}}
+		</div>
+	</div>
 
-<p>
-	{{#if view.isAdding}}
-		<button class="btn btn-primary" {{ action "register" }}>
-		Register
-		</button>
-	{{else}}
-		<button class="btn btn-primary" {{ action "save" }}>
-		Save
-		</button>
+	<div class="control-group">
+		<label for="userPasswordInput" class="control-label">Password (*)</label>
+		<div class="controls">
+		{{view Ember.TextField type="password" valueBinding="currentUser.password" id="userPasswordInput"}}
+		</div>
+	</div>
 	{{/if}}
-	
-	<button class="btn" {{ action "reset" }}>
-	Reset
-	</button>
-	
-	{{#if view.isAdding}}
-		<a class="btn" {{ action "gotoUsers" href=true }}>
-		Back
-		</a>
-	{{else}}
-		<a class="btn" {{ action "gotoShow" currentUser href=true }}>
-		Back
-		</a>
-	{{/if}}
-</p>
+	<div class="control-group">
+		<label for="userFirstNameInput" class="control-label">First name (*)</label>
+		<div class="controls">
+		{{view Ember.TextField valueBinding="currentUser.firstName" id="userFirstNameInput"}}
+		</div>
+	</div>
+	<div class="control-group">
+		<label for="userLastNameInput" class="control-label">Last name (*)</label>
+		<div class="controls">
+		{{view Ember.TextField valueBinding="currentUser.lastName" id="userLastNameInput"}}
+		</div>
+	</div>
+	<div class="control-group">
+		<label for="userEmailAddressInput" class="control-label">E-mailaddress (*)</label>
+		<div class="controls">
+		{{view Ember.TextField valueBinding="currentUser.emailAddress" id="userEmailAddressInput"}}
+		</div>
+	</div>
+	<div class="control-group">
+		<label for="userCellphoneNumberInput" class="control-label">Cellphone number (*)</label>
+		<div class="controls">
+		{{view Ember.TextField valueBinding="currentUser.cellphoneNumber" id="userCellphoneNumberInput"}}
+		</div>
+	</div>
+	<div class="control-group">
+		<label for="userTelephoneNumberInput" class="control-label">Telephone number</label>
+		<div class="controls">
+		{{view Ember.TextField valueBinding="currentUser.telephoneNumber" id="userTelephoneNumberInput"}}
+		</div>
+	</div>
+	<div class="control-group">
+		<label for="userStreetAndNrInput" class="control-label">Street and number (*)</label>
+		<div class="controls">
+		{{view Ember.TextField valueBinding="currentUser.streetAndNr" id="userStreetAndNrInput"}}
+		</div>
+	</div>
+	<div class="control-group">
+		<label for="userZipCodeInput" class="control-label">Zipcode (*)</label>
+		<div class="controls">
+		{{view Ember.TextField valueBinding="currentUser.zipCode" id="userZipCodeInput"}}
+		</div>
+	</div>
+	<div class="control-group">
+		<label for="userCityInput" class="control-label">City (*)</label>
+		<div class="controls">
+		{{view Ember.TextField valueBinding="currentUser.city" id="userCityInput"}}
+		</div>
+	</div>
+	<div class="control-group">
+		<label for="userBirthDateInput" class="control-label">Birthdate (*)</label>
+		<div class="controls">
+		{{view Ember.TextField valueBinding="currentUser.birthDate" id="userBirthDateInput"}}
+		</div>
+	</div>
+
+	<div class="control-group">
+		<div class="controls">
+			{{#if view.isAdding}}
+				<button class="btn btn-primary" {{ action "register" }}>
+				Register
+				</button>
+			{{else}}
+				<button class="btn btn-primary" {{ action "save" }}>
+				Save
+				</button>
+			{{/if}}
+			
+			<button class="btn" {{ action "reset" }}>
+			Reset
+			</button>
+			
+			{{#if view.isAdding}}
+				<a class="btn" {{ action "gotoUsers" href=true }}>
+				Back
+				</a>
+			{{else}}
+				<a class="btn" {{ action "gotoShow" currentUser href=true }}>
+				Back
+				</a>
+			{{/if}}
+		</div>
+	</div>
+</div>

@@ -17,7 +17,7 @@ define([
 				inputId = Ember.$(this).attr("id");
 				label = Ember.$("label[for=" + inputId + "]");
 
-				Ember.$(this).attr("title", label.text());
+				Ember.$(this).attr("title", label.text().replace(" (*)", ""));
 
 				if (self.contains(label, "date")) {
 					self.setDatepicker(this);

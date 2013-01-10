@@ -1,45 +1,58 @@
-<table>
-	<tr>
-		<td><label for="pageNameInput">Name</label> (*):</td>
-		<td>{{view Ember.TextField valueBinding="currentPage.name" id="pageNameInput"}}</td>
-	</tr>
-	<tr>
-		<td><label for="pageMenuTitleInput">Menu title</label> (*):</td>
-		<td>{{view Ember.TextField valueBinding="currentPage.menuTitle" id="pageMenuTitleInput"}}</td>
-	</tr>
-	<tr>
-		<td><label for="pageIsHiddenInput">Hidden</label>:</td>
-		<td>{{view Ember.Checkbox checkedBinding="currentPage.isHidden" id="pageIsHiddenInput"}}</td>
-	</tr>
-	<tr>
-		<td><label for="pageParentInput">Parent page</label>:</td>
-		<td>{{view Ember.Select contentBinding="controller.otherPages" valueBinding="currentPage.parent" optionValuePath="content._id"
-       optionLabelPath="content.menuTitle"}}</td>
-	</tr>
-</table>
+<div class="form-horizontal">
+	<div class="control-group">
+		<label for="pageNameInput" class="control-label">Name (*)</label>
+		<div class="controls">
+		{{view Ember.TextField valueBinding="currentPage.name" id="pageNameInput"}}
+		</div>
+	</div>
+	
+	<div class="control-group">
+		<label for="pageMenuTitleInput" class="control-label">Menu title (*)</label>
+		<div class="controls">
+		{{view Ember.TextField valueBinding="currentPage.menuTitle" id="pageMenuTitleInput"}}
+		</div>
+	</div>
+	
+	<div class="control-group">
+		<label for="pageIsHiddenInput" class="control-label">Hidden</label>
+		<div class="controls">
+		{{view Ember.Checkbox checkedBinding="currentPage.isHidden" id="pageIsHiddenInput"}}
+		</div>
+	</div>
+	
+	<div class="control-group">
+		<label for="pageParentInput" class="control-label">Parent page</label>
+		<div class="controls">
+		{{view Ember.Select contentBinding="controller.otherPages" valueBinding="currentPage.parent" optionValuePath="content._id" 
+		optionLabelPath="content.menuTitle"}}
+		</div>
+	</div>
 
-<p>
-	{{#if view.isAdding}}
-		<button class="btn btn-primary" {{ action "add" }}>
-		Add
-		</button>
-	{{else}}
-		<button class="btn btn-primary" {{ action "save" }}>
-		Save
-		</button>
-	{{/if}}
-	
-	<button class="btn" {{ action "reset" }}>
-	Reset
-	</button>
-	
-	{{#if view.isAdding}}
-		<a class="btn" {{ action "gotoPages" href=true }}>
-		Back
-		</a>
-	{{else}}
-		<a class="btn" {{ action "gotoShow" currentPage href=true }}>
-		Back
-		</a>
-	{{/if}}
-</p>
+	<div class="control-group">
+	    <div class="controls">
+			{{#if view.isAdding}}
+				<button class="btn btn-primary" {{ action "add" }}>
+				Add
+				</button>
+			{{else}}
+				<button class="btn btn-primary" {{ action "save" }}>
+				Save
+				</button>
+			{{/if}}
+			
+			<button class="btn" {{ action "reset" }}>
+			Reset
+			</button>
+			
+			{{#if view.isAdding}}
+				<a class="btn" {{ action "gotoPages" href=true }}>
+				Back
+				</a>
+			{{else}}
+				<a class="btn" {{ action "gotoShow" currentPage href=true }}>
+				Back
+				</a>
+			{{/if}}
+		</div>
+	</div>
+</div>

@@ -5,6 +5,9 @@ define([
 
 	return Ember.View.extend({
 		template : Ember.Handlebars.compile(template),
+		classNames : [
+			"menuItem"
+		],
 		isRenaming : false,
 		enableRenameMenuTitle : function () {
 			this.set("isRenaming", true);

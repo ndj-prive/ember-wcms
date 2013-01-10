@@ -177,8 +177,7 @@
 				],
 				exports : "jasmine"
 			}
-		},
-		urlArgs : "bust=" + (new Date()).getTime()
+		}
 	});
 
 	require([

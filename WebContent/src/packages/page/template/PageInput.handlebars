@@ -24,7 +24,7 @@
 		<label for="pageParentInput" class="control-label">Parent page</label>
 		<div class="controls">
 		{{view Ember.Select contentBinding="controller.otherPages" valueBinding="currentPage.parent" optionValuePath="content._id" 
-		optionLabelPath="content.menuTitle"}}
+		optionLabelPath="content.menuTitle" id="pageParentInput"}}
 		</div>
 	</div>
 

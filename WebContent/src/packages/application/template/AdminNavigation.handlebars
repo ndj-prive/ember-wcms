@@ -1,13 +1,13 @@
 {{#if isLoggedIn}}
 <div class="btn-group dropdown">
-	<button class="btn btn-small dropdown-toggle" id="adminNavigationDropdown" data-toggle="dropdown">
+	<button class="btn btn-small dropdown-toggle" id="adminNavigationDropdown" aria-haspopup="true" data-toggle="dropdown">
 		Navigate <span class="caret"></span>
 	</button>
 
-	<ul class="dropdown-menu" role="menu" aria-labelledby="adminNavigationDropdown">
+	<ul class="dropdown-menu" aria-labelledby="adminNavigationDropdown">
 		<li><a {{ action gotoPages href=true }}>Pages</a></li>
 		<li><a {{ action gotoUsers href=true }}>Users</a></li>
-		<li><a href="" {{ action "logout" }}>Logout</a><li>
+		<li><a href="" {{ action "logout" }}>Logout</a></li>
 	</ul>
 </div>
 {{/if}}

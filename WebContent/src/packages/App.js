@@ -27,7 +27,9 @@ define([
 			// revision : 8
 			// });
 
-			Ember.$.couch.urlPrefix = "/couchdb";
+			//Ember.$.couch.urlPrefix = "/couchdb";
+			//configure your CouchDB host in .htaccess
+			Ember.$.couch.urlPrefix = "dbproxy";
 
 			ApplicationInit.initialize();
 			PageInit.initialize();

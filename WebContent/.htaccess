@@ -1,3 +1,4 @@
-##Configure your CouchDB host on line 3. Make sure to only make changes between the slashes.
+# Configure your CouchDB host on line 3. Make sure to only make changes between the slashes.
+
 RewriteEngine On
-RewriteRule dbproxy/(.+) http://89.207.135.162:5984/$1 [P]
+RewriteRule couchdb/(.+) http://89.207.135.162:5984/$1 [P]

@@ -5,14 +5,6 @@ define([
 
 	return {
 		run : function () {
-			Ember.App = Ember.Application.create({
-				autoinit : false
-			});
-
-			Ember.App.ready = function () {
-				Ember.$("#initialLoading").remove();
-			};
-
 			// TODO: Ember-Data implementeren ipv jQuery Couch plugin te
 			// gebruiken
 			// Ember.App.store = DS.Store.create({
@@ -27,9 +19,16 @@ define([
 			// revision : 8
 			// });
 
-			//Ember.$.couch.urlPrefix = "/couchdb";
-			//configure your CouchDB host in .htaccess
-			Ember.$.couch.urlPrefix = "dbproxy";
+			// TODO: configure your CouchDB host in .htaccess
+			Ember.$.couch.urlPrefix = "couchdb";
+
+			Ember.App = Ember.Application.create({
+				autoinit : false
+			});
+
+			Ember.App.ready = function () {
+				Ember.$("#initialLoading").remove();
+			};
 
 			ApplicationInit.initialize();
 			PageInit.initialize();

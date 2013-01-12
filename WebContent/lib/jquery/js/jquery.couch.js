@@ -632,7 +632,7 @@
             complete: function(req) {
               var resp = $.parseJSON(req.responseText);
               if (req.status == 200 || req.status == 201 || req.status == 202) {
-                doc._id = resp.id;
+                doc.set("_id", resp.id);
                 doc._rev = resp.rev;
                 if (versioned) {
                   db.openDoc(doc._id, {

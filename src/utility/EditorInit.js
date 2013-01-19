@@ -1,10 +1,10 @@
 (function () {
-	"use strict";
+    "use strict";
 
-	var path, lastSlash;
+    var path, lastSlash;
 
-	path = document.location.pathname;
-	lastSlash = path.lastIndexOf("/") + 1;
+    path = document.location.pathname;
+    lastSlash = path.lastIndexOf("/") + 1;
 
-	window.CKEDITOR_BASEPATH = path.substring(0, lastSlash) + "lib/ckeditor/";
+    window.CKEDITOR_BASEPATH = path.substring(0, lastSlash) + "lib/ckeditor/";
 }());

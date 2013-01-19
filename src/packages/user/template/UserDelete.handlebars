@@ -1,12 +1,13 @@
 <p>
-Are you sure you want to delete user "{{currentUser.firstName}} {{currentUser.lastName}}"?
+    Are you sure you want to delete user "{{currentUser.firstName}} {{currentUser.lastName}}"?
 </p>
 
 <p>
-	<button class="btn btn-primary" {{ action "confirm" }}>
-	Confirm
-	</button>
-	<a class="btn" {{ action "gotoShow" currentUser href=true }}>
-	Back
-	</a>
+    <button class="btn btn-primary"
+    {{ action "confirm" }}>
+    Confirm
+    </button>
+    <a class="btn" {{ action "gotoShow" currentUser href=true }}>
+    Back
+    </a>
 </p>

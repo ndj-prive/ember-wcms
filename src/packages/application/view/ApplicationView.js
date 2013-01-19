@@ -1,9 +1,9 @@
 define([
-	"Ember", "text!ApplicationTemplate/Application.handlebars"
+    "Ember", "text!ApplicationTemplate/Application.handlebars"
 ], function (Ember, template) {
-	"use strict";
+    "use strict";
 
-	return Ember.View.extend({
-		template : Ember.Handlebars.compile(template)
-	});
+    return Ember.View.extend({
+        template : Ember.Handlebars.compile(template)
+    });
 });

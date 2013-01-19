@@ -1,50 +1,58 @@
 <div>
-	<p>
-		<strong>First name:</strong>
-		{{currentUser.firstName}}
-	</p>
-	<p>
-		<strong>Last name:</strong>
-		{{currentUser.lastName}}
-	</p>
-	<p>
-		<strong>E-mailaddress:</strong>
-		{{currentUser.emailAddress}}
-	</p>
-	<p>
-		<strong>Cellphone number:</strong>
-		{{currentUser.cellphoneNumber}}
-	</p>
-	<p>
-		<strong>Telephone number:</strong>
-		{{currentUser.telephoneNumber}}
-	</p>
-	<p>
-		<strong>Street and number:</strong>
-		{{currentUser.streetAndNr}}
-	</p>
-	<p>
-		<strong>Zipcode:</strong>
-		{{currentUser.zipCode}}
-	</p>
-	<p>
-		<strong>City:</strong>
-		{{currentUser.city}}
-	</p>
-	<p>
-		<strong>Birthdate:</strong>
-		{{currentUser.birthDate}}
-	</p>
+    <p>
+        <strong>First name:</strong>
+        {{currentUser.firstName}}
+    </p>
 
-	<div class="controls">
-		<a class="btn btn-primary" {{ action "gotoEdit" currentUser href=true }}>
-		Edit
-		</a>
-		<a class="btn btn-primary" {{ action "gotoDelete" currentUser href=true }}>
-		Delete
-		</a>
-		<a class="btn" {{ action "gotoUsers" href=true }}>
-		Back
-		</a>
-	</div>
+    <p>
+        <strong>Last name:</strong>
+        {{currentUser.lastName}}
+    </p>
+
+    <p>
+        <strong>E-mailaddress:</strong>
+        {{currentUser.emailAddress}}
+    </p>
+
+    <p>
+        <strong>Cellphone number:</strong>
+        {{currentUser.cellphoneNumber}}
+    </p>
+
+    <p>
+        <strong>Telephone number:</strong>
+        {{currentUser.telephoneNumber}}
+    </p>
+
+    <p>
+        <strong>Street and number:</strong>
+        {{currentUser.streetAndNr}}
+    </p>
+
+    <p>
+        <strong>Zipcode:</strong>
+        {{currentUser.zipCode}}
+    </p>
+
+    <p>
+        <strong>City:</strong>
+        {{currentUser.city}}
+    </p>
+
+    <p>
+        <strong>Birthdate:</strong>
+        {{currentUser.birthDate}}
+    </p>
+
+    <div class="controls">
+        <a class="btn btn-primary" {{ action "gotoEdit" currentUser href=true }}>
+        Edit
+        </a>
+        <a class="btn btn-primary" {{ action "gotoDelete" currentUser href=true }}>
+        Delete
+        </a>
+        <a class="btn" {{ action "gotoUsers" href=true }}>
+        Back
+        </a>
+    </div>
 </div>

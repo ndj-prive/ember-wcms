@@ -1,33 +1,33 @@
 define([
-	"Ember"
+    "Ember"
 ], function (Ember) {
-	"use strict";
+    "use strict";
 
-	return Ember.Route.extend({
-		route : "/:id/delete",
-		deserialize : function (router, context) {
-			return router.get("userController").findUser(context.id);
-		},
-		serialize : function (router, context) {
-			return {
-				id : context._id
-			};
-		},
-		connectOutlets : function (router, context) {
-			router.get("userController").set("currentUser", context);
+    return Ember.Route.extend({
+        route : "/:id/delete",
+        deserialize : function (router, context) {
+            return router.get("userController").findUser(context.id);
+        },
+        serialize : function (router, context) {
+            return {
+                id : context._id
+            };
+        },
+        connectOutlets : function (router, context) {
+            router.get("userController").set("currentUser", context);
 
-			router.get("userController").connectOutlet({
-				outletName : "userState",
-				viewClass : router.namespace.UserDeleteView,
-				controller : router.get("userController")
-			});
+            router.get("userController").connectOutlet({
+                outletName : "userState",
+                viewClass : router.namespace.UserDeleteView,
+                controller : router.get("userController")
+            });
 
-			router.get("applicationController").updateTitle("user delete - " + context.get("name"));
-		},
-		confirm : function (router) {
-			router.get("userController").deleteUser();
+            router.get("applicationController").updateTitle("user delete - " + context.get("name"));
+        },
+        confirm : function (router) {
+            router.get("userController").deleteUser();
 
-			router.transitionTo("user.index");
-		}
-	});
+            router.transitionTo("user.index");
+        }
+    });
 });

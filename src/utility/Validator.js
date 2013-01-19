@@ -1,37 +1,37 @@
 define([
-	"Ember"
+    "Ember"
 ], function (Ember) {
-	"use strict";
+    "use strict";
 
-	return {
-		validate : function (div) {
-			var result, self;
+    return {
+        validate : function (div) {
+            var result, self;
 
-			self = this;
+            self = this;
 
-			Ember.$.validity.start();
+            Ember.$.validity.start();
 
-			div.find("input").each(function () {
-				var inputId, label;
+            div.find("input").each(function () {
+                var inputId, label;
 
-				inputId = Ember.$(this).attr("id");
-				label = Ember.$("label[for=" + inputId + "]");
+                inputId = Ember.$(this).attr("id");
+                label = Ember.$("label[for=" + inputId + "]");
 
-				if (self.contains(label, "*")) {
-					Ember.$(this).require();
-				}
+                if (self.contains(label, "*")) {
+                    Ember.$(this).require();
+                }
 
-				if (self.contains(label, "mail")) {
-					Ember.$(this).match("email");
-				}
-			});
+                if (self.contains(label, "mail")) {
+                    Ember.$(this).match("email");
+                }
+            });
 
-			result = Ember.$.validity.end();
+            result = Ember.$.validity.end();
 
-			return result.valid;
-		},
-		contains : function (label, key) {
-			return label.parent().text().toLowerCase().indexOf(key) !== -1;
-		}
-	};
+            return result.valid;
+        },
+        contains : function (label, key) {
+            return label.parent().text().toLowerCase().indexOf(key) !== -1;
+        }
+    };
 });

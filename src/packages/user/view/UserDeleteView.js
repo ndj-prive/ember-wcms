@@ -1,9 +1,9 @@
 define([
-	"Ember", "text!UserTemplate/UserDelete.handlebars"
+    "Ember", "text!UserTemplate/UserDelete.handlebars"
 ], function (Ember, template) {
-	"use strict";
+    "use strict";
 
-	return Ember.View.extend({
-		template : Ember.Handlebars.compile(template)
-	});
+    return Ember.View.extend({
+        template : Ember.Handlebars.compile(template)
+    });
 });

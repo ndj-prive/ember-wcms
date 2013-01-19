@@ -1,7 +1,7 @@
 {{#if isLoggedIn}}
 
 <div id="pageContentEditor" contenteditable="true">
-{{{unbound currentPage.content}}}
+    {{{unbound currentPage.content}}}
 </div>
 
 <button id="pageSave" class="btn" {{ action "save" target="view" }}>
@@ -11,7 +11,7 @@ Save
 {{else}}
 
 <div id="pageContentEditor">
-{{{currentPage.content}}}
+    {{{currentPage.content}}}
 </div>
 
 {{/if}}

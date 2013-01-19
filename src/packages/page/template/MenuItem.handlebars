@@ -14,37 +14,37 @@
 {{#if isLoggedIn}}
 
 <div class="btn-group dropdown">
-	<button class="btn btn-mini btn-link dropdown-toggle" {{bindAttr id="view.dropDownId"}} aria-haspopup="true" data-toggle="dropdown">
-		<span class="caret"></span>
-	</button>
+    <button class="btn btn-mini btn-link dropdown-toggle" {{bindAttr id="view.dropDownId"}} aria-haspopup="true" data-toggle="dropdown">
+    <span class="caret"></span>
+    </button>
 
-	<ul class="dropdown-menu" {{bindAttr aria-labelledby="view.dropDownId"}}>
-		<li>
-			<a href="" {{ action "enableRenameMenuTitle" target="view" }}>
-			Rename
-			</a>
-		</li>
-		<li>
-			<a {{ action "gotoAdd" view.content href=true }}>
-			Add
-			</a>
-		</li>
-		<li>
-			<a {{ action "gotoEdit" view.content href=true }}>
-			Edit
-			</a>
-		</li>
-		<li>
-			<a {{ action "gotoDelete" view.content href=true }}>
-			Delete
-			</a>
-		</li>
-	</ul>
+    <ul class="dropdown-menu" {{bindAttr aria-labelledby="view.dropDownId"}}>
+    <li>
+        <a href="" {{ action "enableRenameMenuTitle" target="view" }}>
+        Rename
+        </a>
+    </li>
+    <li>
+        <a {{ action "gotoAdd" view.content href=true }}>
+        Add
+        </a>
+    </li>
+    <li>
+        <a {{ action "gotoEdit" view.content href=true }}>
+        Edit
+        </a>
+    </li>
+    <li>
+        <a {{ action "gotoDelete" view.content href=true }}>
+        Delete
+        </a>
+    </li>
+    </ul>
 </div>
 {{/if}}
 
 {{/if}}
 
 {{#if view.content.children}}
-	{{view view.parentView.constructor contentBinding="view.content.children"}}
+{{view view.parentView.constructor contentBinding="view.content.children"}}
 {{/if}}

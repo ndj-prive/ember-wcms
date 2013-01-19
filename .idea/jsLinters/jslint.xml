@@ -4,9 +4,10 @@
     <option browser="true" />
     <option indent="4" />
     <option maxerr="50" />
-    <option maxlen="150" />
+    <option maxlen="200" />
     <option nomen="true" />
     <option predef="require,define,describe,it,runs,expect,waitsFor" />
+    <option todo="true" />
   </component>
 </project>
 

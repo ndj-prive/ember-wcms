@@ -1,4 +1,4 @@
 ({
-	cssIn : "css/main.css",
-	out : "build/cms.min.css"
+    cssIn : "css/main.css",
+    out : "build/css/ember-wcms.min.css"
 })

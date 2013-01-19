@@ -1,16 +1,16 @@
 define([
-	"LoginSpec", "PageSpec", "UserSpec", "Jasmine", "JasmineHTML", "JasmineJQuery"
+    "LoginSpec", "PageSpec", "UserSpec", "Jasmine", "JasmineHTML", "JasmineJQuery"
 ], function (LoginSpec, PageSpec, UserSpec, Jasmine) {
-	"use strict";
+    "use strict";
 
-	return {
-		run : function () {
-			LoginSpec.run();
-			PageSpec.run();
-			UserSpec.run();
+    return {
+        run : function () {
+            LoginSpec.run();
+            PageSpec.run();
+            UserSpec.run();
 
-			Jasmine.getEnv().addReporter(new Jasmine.TrivialReporter());
-			Jasmine.getEnv().execute();
-		}
-	};
+            Jasmine.getEnv().addReporter(new Jasmine.TrivialReporter());
+            Jasmine.getEnv().execute();
+        }
+    };
 });

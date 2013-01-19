@@ -1,4 +1,3 @@
-
 /*! jQuery UI - v1.9.2 - 2012-11-24
 * http://jqueryui.com
 * Includes: jquery.ui.core.css, jquery.ui.resizable.css, jquery.ui.selectable.css, jquery.ui.accordion.css, jquery.ui.autocomplete.css, jquery.ui.button.css, jquery.ui.datepicker.css, jquery.ui.dialog.css, jquery.ui.menu.css, jquery.ui.progressbar.css, jquery.ui.slider.css, jquery.ui.spinner.css, jquery.ui.tabs.css, jquery.ui.tooltip.css
@@ -5554,128 +5553,128 @@ a.badge:hover {
   position: fixed;
 }
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 table {
-	color: #605742;
+    color: #605742;
 }
 body {
-	text-align: center;
-	font-size: 1em;
-	font-family: Verdana, sans-serif;
+    text-align: center;
+    font-size: 1em;
+    font-family: Verdana, sans-serif;
 }
 #outerWrapper {
-	background: url(../img/body.jpg) repeat-y top center;
+    background: url(../img/body.jpg) repeat-y top center;
 }
 #mainWrapper {
-	background: url(../img/header.jpg) repeat-x;
+    background: url(../img/header.jpg) repeat-x;
 }
 #contentWrapper {
-	width: 1000px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 #header {
-	float: right;
-	width: 730px;
-	margin-right: 30px;
-	display: inline;
+    float: right;
+    width: 730px;
+    margin-right: 30px;
+    display: inline;
 }
 #adminNavigation {
-	float: right;
-	margin-top: 10px;
+    float: right;
+    margin-top: 10px;
 }
 #footer {
-	clear: both;
-	border-top: 1px solid #5E534F;
-	background-color: #E7E5D2;
-	padding: 10px;
-	color: #7D7257;
+    clear: both;
+    border-top: 1px solid #5E534F;
+    background-color: #E7E5D2;
+    padding: 10px;
+    color: #7D7257;
 }
 #loading {
-	height: 19px;
-	margin-left: -220px;
+    height: 19px;
+    margin-left: -220px;
 }
 .loadingBar {
-	width: 220px;
-	height: 19px;
-	margin: 0 auto;
-	background-image: url(../img/loadingBar.gif);
-	background-repeat: no-repeat;
+    width: 220px;
+    height: 19px;
+    margin: 0 auto;
+    background-image: url(../img/loadingBar.gif);
+    background-repeat: no-repeat;
 }
 .control-group {
-	height: 30px;
+    height: 30px;
 }
 #login {
-	float: right;
-	margin: 4px 0 0 0;
-	padding: 4px;
+    float: right;
+    margin: 4px 0 0 0;
+    padding: 4px;
 }
 #login p {
-	display: inline;
+    display: inline;
 }
 #login div {
-	display: inline;
-	float: right;
+    display: inline;
+    float: right;
 }
 #logo {
-	background: url(../img/logobox.jpg) no-repeat;
-	width: 194px;
-	height: 225px;
-	margin-top: 4px;
-	text-align: center;
+    background: url(../img/logobox.jpg) no-repeat;
+    width: 194px;
+    height: 225px;
+    margin-top: 4px;
+    text-align: center;
 }
 #logo img {
-	margin-top: 85px;
+    margin-top: 85px;
 }
 #sidebar {
-	float: left;
-	width: 210px;
+    float: left;
+    width: 210px;
 }
 #pageState {
-	padding-top: 100px;
-	padding-left: 250px;
-	padding-bottom: 50px;
+    padding-top: 100px;
+    padding-left: 250px;
+    padding-bottom: 50px;
 }
 #userState {
-	padding-top: 50px;
-	padding-left: 250px;
-	padding-bottom: 50px;
+    padding-top: 50px;
+    padding-left: 250px;
+    padding-bottom: 50px;
 }
 #pageContentEditor:focus {
-	background-color: #f3f2ea;
+    background-color: #f3f2ea;
 }
 #pageSave {
-	float: right;
+    float: right;
 }
 #pageAddLink {
-	margin-left: 25px;
+    margin-left: 25px;
 }
 .menuItems {
-	list-style-type: none;
+    list-style-type: none;
 }
 .menuItems>li {
-	padding-top: 5px;
+    padding-top: 5px;
 }
 .menuItems>li>.dropdown {
-	float: right;
-	display: inline;
+    float: right;
+    display: inline;
 }
 .menuItems>li>a {
-	color: #181101;
-	font-size: 10pt;
+    color: #181101;
+    font-size: 10pt;
 }
 .menuItems>li>a:hover {
-	color: #6F571C;
-	text-decoration: none;
+    color: #6F571C;
+    text-decoration: none;
 }
 #userSearchInput {
-	float: right;
-	margin-top: 20px;
+    float: right;
+    margin-top: 20px;
 }
 #userSearchResult {
-	float: left;
-	margin-top: 20px;
+    float: left;
+    margin-top: 20px;
 }

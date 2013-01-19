@@ -1,9 +1,9 @@
 define([
-	"Ember", "text!PageTemplate/PageDelete.handlebars"
+    "Ember", "text!PageTemplate/PageDelete.handlebars"
 ], function (Ember, template) {
-	"use strict";
+    "use strict";
 
-	return Ember.View.extend({
-		template : Ember.Handlebars.compile(template)
-	});
+    return Ember.View.extend({
+        template : Ember.Handlebars.compile(template)
+    });
 });

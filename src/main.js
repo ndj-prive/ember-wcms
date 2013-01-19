@@ -14,11 +14,11 @@
             EmberDataAdapter : "lib/ember/ember-couchdb-adapter-latest",
             Handlebars : "lib/ember/handlebars-1.0.rc.1",
 
-            jQuery : "lib/jquery/jquery-1.8.3",
-            jQueryUI : "lib/jquery/jquery-ui-1.9.2.custom",
-            jQueryValidity : "lib/jquery/jquery.validity",
-            jQueryCouch : "lib/jquery/jquery.couch",
-            Bootstrap : "lib/bootstrap/bootstrap",
+            jQuery : "lib/jquery/js/jquery-1.8.3",
+            jQueryUI : "lib/jquery/js/jquery-ui-1.9.2.custom",
+            jQueryValidity : "lib/jquery/js/jquery.validity",
+            jQueryCouch : "lib/jquery/js/jquery.couch",
+            Bootstrap : "lib/bootstrap/js/bootstrap",
 
             Editor : "lib/ckeditor/ckeditor",
 
@@ -26,9 +26,9 @@
 
             // TODO: For unit testing
             // Jasmine
-            Jasmine : "lib/jasmine/jasmine",
-            JasmineHTML : "lib/jasmine/jasmine-html",
-            JasmineJQuery : "lib/jasmine/jasmine-jquery",
+            Jasmine : "lib/jasmine/js/jasmine",
+            JasmineHTML : "lib/jasmine/js/jasmine-html",
+            JasmineJQuery : "lib/jasmine/js/jasmine-jquery",
 
             // App
             App : "src/packages/App",

@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    color: #605742;
+}
+
+body {
+    text-align: center;
+    font-size: 1em;
+    font-family: Verdana, sans-serif;
+}
+
+#outerWrapper {
+    background: url(../../../../img/body.jpg) repeat-y top center;
+}
+
+#mainWrapper {
+    background: url(../../../../img/header.jpg) repeat-x;
+}
+
+#contentWrapper {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+#header {
+    float: right;
+    width: 730px;
+    margin-right: 30px;
+    display: inline;
+}
+
+#adminNavigation {
+    float: right;
+    margin-top: 10px;
+}
+
+#footer {
+    clear: both;
+    border-top: 1px solid #5E534F;
+    background-color: #E7E5D2;
+    padding: 10px;
+    color: #7D7257;
+}
+
+#loading {
+    height: 19px;
+    margin-left: -220px;
+}
+
+.loadingBar {
+    width: 220px;
+    height: 19px;
+    margin: 0 auto;
+    background-image: url('../../../../img/loadingBar.gif');
+    background-repeat: no-repeat;
+}
+
+#login {
+    float: right;
+    margin: 4px 0 0 0;
+    padding: 4px;
+}
+
+#login p {
+    display: inline;
+}
+
+#login div {
+    display: inline;
+    float: right;
+}
+
+/* TODO: Temporary fix where first control-group in a form is too large for some reason. */
+.control-group {
+    height: 30px;
+}

@@ -1,8 +1,8 @@
 ({
-	baseUrl : "WebContent",
+	baseUrl : ".",
 	name : "src/main",
-	out : "WebContent/build/cms.min.js",
-	mainConfigFile : "WebContent/src/main.js",
+	out : "build/cms.min.js",
+	mainConfigFile : "src/main.js",
 	include : [
 		"lib/require/require.js"
 	]

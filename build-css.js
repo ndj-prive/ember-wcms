@@ -1,4 +1,4 @@
 ({
-	cssIn : "WebContent/css/main.css",
-	out : "WebContent/build/cms.min.css"
+	cssIn : "css/main.css",
+	out : "build/cms.min.css"
 })

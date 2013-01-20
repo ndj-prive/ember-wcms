@@ -3,8 +3,8 @@ JSLINT = ./node_modules/jslint/bin/jslint.js
 REQUIREJS = ./node_modules/requirejs/bin/r.js
 
 build:
-	@$(REQUIREJS) -o build-js.js
-	@$(REQUIREJS) -o build-css.js
+	@$(REQUIREJS) -o optimize-js.js
+	@$(REQUIREJS) -o optimize-css.js
 	@rm -rf $@
 	@cp -r example $@
 	@cp -r img $@

@@ -6,11 +6,13 @@ define([
     return {
         controller : null,
         applicationController : null,
+        loginController : null,
         run : function () {
             var self = this;
 
             this.controller = Ember.App.router.get("pageController");
             this.applicationController = Ember.App.router.get("applicationController");
+            this.loginController = Ember.App.router.get("loginController");
 
             describe("Menu", function () {
                 self.getPages();
@@ -20,12 +22,32 @@ define([
                     menuTitle : "Unit Test",
                     content : "Don't mind me, I'm just from the unit test.",
                     name : "unitTest",
-                    isHidden : false
+                    isHidden : false,
+                    parent : "unittest-page"
                 });
+
+                self.loginWithPermissions();
 
                 self.addPage(page);
                 self.editPage(page);
                 self.deletePage(page);
+            });
+        },
+        loginWithPermissions : function () {
+            var self = this;
+
+            it("login with permissions", function () {
+                self.loginController.set("name", "testadmin");
+                self.loginController.set("password", "testadmin23");
+                self.loginController.login();
+
+                waitsFor(function () {
+                    return !self.applicationController.get("isLoading");
+                }, "AJAX timeout", 5000);
+
+                runs(function () {
+                    expect(self.loginController.get("isLoggedIn")).toBe(true);
+                });
             });
         },
         getPages : function () {

@@ -1,17 +1,11 @@
 define([
-    "Ember", "text!PageTemplate/PageInput.handlebars", "FormPreparer"
-], function (Ember, template, FormPreparer) {
+    "Ember", "text!PageTemplate/PageInput.handlebars", "TitleTextField"
+], function (Ember, template, TitleTextField) {
     "use strict";
 
     return Ember.View.extend({
         template : Ember.Handlebars.compile(template),
-        didInsertElement : function () {
-            this._super();
-
-            var div = this.$();
-
-            FormPreparer.prepare(div);
-        },
-        isAdding : false
+        isAdding : false,
+        TitleTextField : TitleTextField
     });
 });

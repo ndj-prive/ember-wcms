@@ -3,7 +3,7 @@
         <label for="pageNameInput" class="control-label">Name (*)</label>
 
         <div class="controls">
-            {{view Ember.TextField valueBinding="currentPage.name" id="pageNameInput"}}
+            {{view view.TitleTextField valueBinding="currentPage.name" id="pageNameInput"}}
         </div>
     </div>
 
@@ -11,7 +11,7 @@
         <label for="pageMenuTitleInput" class="control-label">Menu title (*)</label>
 
         <div class="controls">
-            {{view Ember.TextField valueBinding="currentPage.menuTitle" id="pageMenuTitleInput"}}
+            {{view view.TitleTextField valueBinding="currentPage.menuTitle" id="pageMenuTitleInput"}}
         </div>
     </div>
 

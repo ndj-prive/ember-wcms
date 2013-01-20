@@ -98,7 +98,8 @@
             UserTemplate : "src/packages/user/template",
 
             // Utilities
-            FormPreparer : "src/utility/FormPreparer",
+            TitleTextField : "src/utility/TitleTextField",
+            DatepickerTextField : "src/utility/DatepickerTextField",
             Validator : "src/utility/Validator",
             EditorInit : "src/utility/EditorInit",
 

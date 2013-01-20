@@ -12,17 +12,19 @@ define([
             Ember.$.validity.start();
 
             div.find("input").each(function () {
-                var inputId, label;
+                var $this, id, label;
 
-                inputId = Ember.$(this).attr("id");
-                label = Ember.$("label[for=" + inputId + "]");
+                $this = Ember.$(this);
+
+                id = $this.attr("id");
+                label = Ember.$("label[for=" + id + "]");
 
                 if (self.contains(label, "*")) {
-                    Ember.$(this).require();
+                    $this.require();
                 }
 
                 if (self.contains(label, "mail")) {
-                    Ember.$(this).match("email");
+                    $this.match("email");
                 }
             });
 

@@ -1,70 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb4114ce-c0a3-4bec-b1ce-135190aaef4b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/css/ember-wcms.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/js/ember-wcms.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/login.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/ajax.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/api.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/appendto.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/assets/inlineall/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/assets/outputxhtml/outputxhtml.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/assets/posteddata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/assets/sample.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/assets/sample.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/assets/uilanguages/languages.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/divreplace.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/inlineall.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/inlinebycode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/plugins/dialog/assets/my_dialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/plugins/dialog/dialog.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/plugins/enterkey/enterkey.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/plugins/htmlwriter/assets/outputforflash/outputforflash.fla" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/plugins/htmlwriter/assets/outputforflash/outputforflash.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/plugins/htmlwriter/assets/outputforflash/swfobject.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/plugins/htmlwriter/outputforflash.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/plugins/htmlwriter/outputhtml.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/plugins/magicline/magicline.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/plugins/tableresize/tableresize.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/plugins/toolbar/toolbar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/plugins/wysiwygarea/fullpage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/readonly.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/replacebyclass.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/replacebycode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/sample.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/sample.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/sample_posteddata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/tabindex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/uicolor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/uilanguages.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ckeditor/samples/xhtmlstyle.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/application.css" afterPath="$PROJECT_DIR$/src/packages/application/css/application.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/lib/bootstrap.css" afterPath="$PROJECT_DIR$/lib/bootstrap/css/bootstrap.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/lib/jquery-ui-1.9.2.custom.css" afterPath="$PROJECT_DIR$/lib/jquery/css/jquery-ui-1.9.2.custom.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/lib/jquery.validity.css" afterPath="$PROJECT_DIR$/lib/jquery/css/jquery.validity.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/page.css" afterPath="$PROJECT_DIR$/src/packages/page/css/page.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/user.css" afterPath="$PROJECT_DIR$/src/packages/user/css/user.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/bootstrap/bootstrap.js" afterPath="$PROJECT_DIR$/lib/bootstrap/js/bootstrap.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/jasmine/jasmine-html.js" afterPath="$PROJECT_DIR$/lib/jasmine/js/jasmine-html.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/jasmine/jasmine-jquery.js" afterPath="$PROJECT_DIR$/lib/jasmine/js/jasmine-jquery.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/jasmine/jasmine.css" afterPath="$PROJECT_DIR$/lib/jasmine/css/jasmine.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/jasmine/jasmine.js" afterPath="$PROJECT_DIR$/lib/jasmine/js/jasmine.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/jquery/jquery-1.8.3.js" afterPath="$PROJECT_DIR$/lib/jquery/js/jquery-1.8.3.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/jquery/jquery-ui-1.9.2.custom.js" afterPath="$PROJECT_DIR$/lib/jquery/js/jquery-ui-1.9.2.custom.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/jquery/jquery.couch.js" afterPath="$PROJECT_DIR$/lib/jquery/js/jquery.couch.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/jquery/jquery.validity.js" afterPath="$PROJECT_DIR$/lib/jquery/js/jquery.validity.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build-css.js" afterPath="$PROJECT_DIR$/build-css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/optimize.sh" afterPath="$PROJECT_DIR$/optimize.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/specRunner.html" afterPath="$PROJECT_DIR$/specRunner.html" />
+    <list default="true" id="fb4114ce-c0a3-4bec-b1ce-135190aaef4b" name="Default" comment="Renamed optimize.sh to build.sh.&#10;Created a TitleTextField and a DatepickerTextfield in utilities-folder:&#10; - They are used in PageInput.handlebars and UserInput.handlebars instead of regular Ember.TextField.&#10; - They are included in the views: PageAdd/Edit and UserAdd/Edit.&#10; - Removed FormPreparer instead.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utility/DatepickerTextField.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utility/TitleTextField.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/utility/FormPreparer.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/optimize.sh" afterPath="$PROJECT_DIR$/build.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/js/ember-wcms.min.js" afterPath="$PROJECT_DIR$/build/js/ember-wcms.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/packages/page/template/PageInput.handlebars" afterPath="$PROJECT_DIR$/src/packages/page/template/PageInput.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/packages/page/view/PageAddView.js" afterPath="$PROJECT_DIR$/src/packages/page/view/PageAddView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/packages/page/view/PageEditView.js" afterPath="$PROJECT_DIR$/src/packages/page/view/PageEditView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/packages/user/template/UserInput.handlebars" afterPath="$PROJECT_DIR$/src/packages/user/template/UserInput.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/packages/user/view/UserAddView.js" afterPath="$PROJECT_DIR$/src/packages/user/view/UserAddView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/packages/user/view/UserEditView.js" afterPath="$PROJECT_DIR$/src/packages/user/view/UserEditView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utility/Validator.js" afterPath="$PROJECT_DIR$/src/utility/Validator.js" />
     </list>
     <ignored path="ember-wcms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,10 +35,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FormPreparer.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/utility/FormPreparer.js">
+      <file leaf-file-name="PageSpec.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/spec/PageSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="32" selection-start="349" selection-end="349" vertical-scroll-proportion="0.35462186">
+            <state line="23" column="19" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Validator.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/utility/Validator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="29" selection-start="285" selection-end="285" vertical-scroll-proportion="0.3529412">
               <folding />
             </state>
           </provider>
@@ -103,28 +63,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///dummy.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/utility/FormPreparer.js" />
-        <option value="$PROJECT_DIR$/src/tests/AllSpecs.js" />
-        <option value="$PROJECT_DIR$/src/tests/spec/UserSpec.js" />
-        <option value="$PROJECT_DIR$/src/tests/spec/PageSpec.js" />
-        <option value="$PROJECT_DIR$/src/tests/spec/LoginSpec.js" />
-        <option value="$PROJECT_DIR$/src/packages/page/template/PageInput.handlebars" />
-        <option value="$PROJECT_DIR$/src/packages/application/css/login.css" />
-        <option value="$PROJECT_DIR$/src/packages/application/css/styles.css" />
-        <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/src/main.css" />
-        <option value="$PROJECT_DIR$/src/main.js" />
-        <option value="$PROJECT_DIR$/build-js.js" />
         <option value="$PROJECT_DIR$/build/index.html" />
         <option value="$PROJECT_DIR$/build-css.js" />
         <option value="$PROJECT_DIR$/src/utility/EditorInit.js" />
         <option value="$PROJECT_DIR$/optimize.sh" />
+        <option value="$PROJECT_DIR$/build.sh" />
+        <option value="$PROJECT_DIR$/src/utility/FormPreparer.js" />
+        <option value="$PROJECT_DIR$/src/packages/page/view/PageEditView.js" />
+        <option value="$PROJECT_DIR$/src/packages/page/view/PageAddView.js" />
+        <option value="$PROJECT_DIR$/src/packages/page/template/PageInput.handlebars" />
+        <option value="$PROJECT_DIR$/src/packages/user/template/UserInput.handlebars" />
+        <option value="$PROJECT_DIR$/src/packages/user/view/UserEditView.js" />
+        <option value="$PROJECT_DIR$/src/packages/user/view/UserAddView.js" />
+        <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/src/utility/DatepickerTextField.js" />
+        <option value="$PROJECT_DIR$/src/utility/TitleTextField.js" />
+        <option value="$PROJECT_DIR$/src/utility/Validator.js" />
       </list>
     </option>
   </component>
@@ -206,7 +169,145 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ember-wcms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ember-wcms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utility" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ember-wcms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ember-wcms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ember-wcms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ember-wcms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ember-wcms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ember-wcms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ember-wcms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ember-wcms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="route" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ember-wcms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ember-wcms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ember-wcms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ember-wcms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -230,11 +331,11 @@
       <recent name="$PROJECT_DIR$/build" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/lib/require" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/lib/jquery/css" />
       <recent name="$PROJECT_DIR$/lib/jquery/js" />
-      <recent name="$PROJECT_DIR$/lib/jasmine/css" />
-      <recent name="$PROJECT_DIR$/lib/jasmine/js" />
     </key>
   </component>
   <component name="RunManager">
@@ -279,7 +380,11 @@
       <created>1358635871755</created>
       <updated>1358635871755</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="During optimize.sh, automatically copy /lib/ckeditor into /build as well Now everything in /build/ is all you need for an optimized deployment.&#10;Added comments to explain how optimize.sh works.&#10;Deleted samples in CKEditor.&#10;Moved all CSS in their rightful folder. For example: /css/page.css is now in packages/page/css/page, /css/lib/bootstrap.css is now in lib/bootstrap/css/bootstrap.css&#10;Moved JS-files of each lib back in /lib/xx/js/ instead of /lib/xx/.&#10;Deleted login.css, moved its contents to application.css.&#10;Moved /css/main.css into /src/main.css.">
+      <created>1358639951561</created>
+      <updated>1358639951561</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -306,12 +411,12 @@
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32903227" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2580645" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.4978142" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32903227" sideWeight="0.4978142" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19016394" sideWeight="0.67096776" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19016394" sideWeight="0.67096776" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49836066" order="-1" side_tool="true" content_ui="tabs" />
@@ -394,114 +499,114 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/packages/page/controller/PageController.js">
+    <entry file="file://$PROJECT_DIR$/src/packages/application/view/ApplicationView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="3" selection-start="4626" selection-end="4626" vertical-scroll-proportion="0.8487395">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packages/application/view/AdminNavigationView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packages/application/view/LoginView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="10" selection-start="380" selection-end="380" vertical-scroll-proportion="0.24962178">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packages/page/view/MenuItemView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="16" selection-start="598" selection-end="598" vertical-scroll-proportion="0.33277312">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packages/page/view/PageEditView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="312" selection-end="312" vertical-scroll-proportion="0.27731094">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packages/page/view/PageAddView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="146" selection-end="146" vertical-scroll-proportion="0.075630255">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/packages/page/template/PageInput.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="1962" selection-end="1962" vertical-scroll-proportion="0.8423818">
+        <state line="8" column="0" selection-start="286" selection-end="286" vertical-scroll-proportion="-0.60245186">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/packages/page/css/page.css">
+    <entry file="file://$PROJECT_DIR$/src/packages/page/route/PageAddRoute.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="39" column="40" selection-start="989" selection-end="1007" vertical-scroll-proportion="0.85882354">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/packages/user/css/user.css">
+    <entry file="file://$PROJECT_DIR$/src/packages/user/template/UserInput.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="78" column="43" selection-start="3055" selection-end="3055" vertical-scroll-proportion="0.56042033">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/packages/application/css/application.css">
+    <entry file="file://$PROJECT_DIR$/src/packages/user/view/UserAddView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="22" selection-start="997" selection-end="997" vertical-scroll-proportion="0.42016807">
+        <state line="9" column="49" selection-start="393" selection-end="393" vertical-scroll-proportion="0.22689076">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/specRunner.html">
+    <entry file="file://$PROJECT_DIR$/src/packages/user/view/UserEditView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="7" selection-start="340" selection-end="340" vertical-scroll-proportion="0.44658494">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="8" column="40" selection-start="344" selection-end="344" vertical-scroll-proportion="0.20168068">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="59" selection-start="872" selection-end="872" vertical-scroll-proportion="0.54462934">
+        <state line="100" column="58" selection-start="4656" selection-end="4656" vertical-scroll-proportion="0.3579832">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.css">
+    <entry file="file://$PROJECT_DIR$/src/utility/DatepickerTextField.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="309" selection-end="309" vertical-scroll-proportion="0.13615733">
+        <state line="9" column="18" selection-start="202" selection-end="202" vertical-scroll-proportion="0.22689076">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build-js.js">
+    <entry file="file://$PROJECT_DIR$/src/utility/TitleTextField.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="179" selection-end="179" vertical-scroll-proportion="0.204236">
+        <state line="9" column="25" selection-start="192" selection-end="192" vertical-scroll-proportion="0.22689076">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build-css.js">
+    <entry file="file://$PROJECT_DIR$/src/tests/spec/PageSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="20" selection-start="51" selection-end="51" vertical-scroll-proportion="0.045385778">
+        <state line="23" column="19" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utility/Validator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="889" selection-end="889" vertical-scroll-proportion="0.8396369">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utility/EditorInit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="37" selection-start="133" selection-end="133" vertical-scroll-proportion="0.14128728">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/optimize.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="21" selection-start="486" selection-end="486" vertical-scroll-proportion="0.27231467">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utility/FormPreparer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="32" selection-start="349" selection-end="349" vertical-scroll-proportion="0.35462186">
+        <state line="14" column="29" selection-start="285" selection-end="285" vertical-scroll-proportion="0.3529412">
           <folding />
         </state>
       </provider>

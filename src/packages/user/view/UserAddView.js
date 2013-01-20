@@ -1,17 +1,12 @@
 define([
-    "Ember", "text!UserTemplate/UserInput.handlebars", "FormPreparer"
-], function (Ember, template, FormPreparer) {
+    "Ember", "text!UserTemplate/UserInput.handlebars", "TitleTextField", "DatepickerTextField"
+], function (Ember, template, TitleTextField, DatepickerTextField) {
     "use strict";
 
     return Ember.View.extend({
         template : Ember.Handlebars.compile(template),
-        didInsertElement : function () {
-            this._super();
-
-            var div = this.$();
-
-            FormPreparer.prepare(div);
-        },
-        isAdding : true
+        isAdding : true,
+        TitleTextField : TitleTextField,
+        DatepickerTextField : DatepickerTextField
     });
 });

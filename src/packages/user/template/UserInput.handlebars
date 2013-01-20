@@ -4,7 +4,7 @@
         <label for="userNameInput" class="control-label">Name (*)</label>
 
         <div class="controls">
-            {{view Ember.TextField valueBinding="currentUser.name" id="userNameInput"}}
+            {{view view.TitleTextField valueBinding="currentUser.name" id="userNameInput"}}
         </div>
     </div>
 
@@ -12,7 +12,7 @@
         <label for="userPasswordInput" class="control-label">Password (*)</label>
 
         <div class="controls">
-            {{view Ember.TextField type="password" valueBinding="currentUser.password" id="userPasswordInput"}}
+            {{view view.TitleTextField type="password" valueBinding="currentUser.password" id="userPasswordInput"}}
         </div>
     </div>
     {{/if}}
@@ -20,63 +20,63 @@
         <label for="userFirstNameInput" class="control-label">First name (*)</label>
 
         <div class="controls">
-            {{view Ember.TextField valueBinding="currentUser.firstName" id="userFirstNameInput"}}
+            {{view view.TitleTextField valueBinding="currentUser.firstName" id="userFirstNameInput"}}
         </div>
     </div>
     <div class="control-group">
         <label for="userLastNameInput" class="control-label">Last name (*)</label>
 
         <div class="controls">
-            {{view Ember.TextField valueBinding="currentUser.lastName" id="userLastNameInput"}}
+            {{view view.TitleTextField valueBinding="currentUser.lastName" id="userLastNameInput"}}
         </div>
     </div>
     <div class="control-group">
         <label for="userEmailAddressInput" class="control-label">E-mailaddress (*)</label>
 
         <div class="controls">
-            {{view Ember.TextField valueBinding="currentUser.emailAddress" id="userEmailAddressInput"}}
+            {{view view.TitleTextField valueBinding="currentUser.emailAddress" id="userEmailAddressInput"}}
         </div>
     </div>
     <div class="control-group">
         <label for="userCellphoneNumberInput" class="control-label">Cellphone number (*)</label>
 
         <div class="controls">
-            {{view Ember.TextField valueBinding="currentUser.cellphoneNumber" id="userCellphoneNumberInput"}}
+            {{view view.TitleTextField valueBinding="currentUser.cellphoneNumber" id="userCellphoneNumberInput"}}
         </div>
     </div>
     <div class="control-group">
         <label for="userTelephoneNumberInput" class="control-label">Telephone number</label>
 
         <div class="controls">
-            {{view Ember.TextField valueBinding="currentUser.telephoneNumber" id="userTelephoneNumberInput"}}
+            {{view view.TitleTextField valueBinding="currentUser.telephoneNumber" id="userTelephoneNumberInput"}}
         </div>
     </div>
     <div class="control-group">
         <label for="userStreetAndNrInput" class="control-label">Street and number (*)</label>
 
         <div class="controls">
-            {{view Ember.TextField valueBinding="currentUser.streetAndNr" id="userStreetAndNrInput"}}
+            {{view view.TitleTextField valueBinding="currentUser.streetAndNr" id="userStreetAndNrInput"}}
         </div>
     </div>
     <div class="control-group">
         <label for="userZipCodeInput" class="control-label">Zipcode (*)</label>
 
         <div class="controls">
-            {{view Ember.TextField valueBinding="currentUser.zipCode" id="userZipCodeInput"}}
+            {{view view.TitleTextField valueBinding="currentUser.zipCode" id="userZipCodeInput"}}
         </div>
     </div>
     <div class="control-group">
         <label for="userCityInput" class="control-label">City (*)</label>
 
         <div class="controls">
-            {{view Ember.TextField valueBinding="currentUser.city" id="userCityInput"}}
+            {{view view.TitleTextField valueBinding="currentUser.city" id="userCityInput"}}
         </div>
     </div>
     <div class="control-group">
         <label for="userBirthDateInput" class="control-label">Birthdate (*)</label>
 
         <div class="controls">
-            {{view Ember.TextField valueBinding="currentUser.birthDate" id="userBirthDateInput"}}
+            {{view view.DatepickerTextField valueBinding="currentUser.birthDate" id="userBirthDateInput"}}
         </div>
     </div>
 

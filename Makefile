@@ -1,26 +1,23 @@
-JS = $(shell find lib -name "*.js")
-REQUIRE_JS = node ./node_modules/requirejs/bin/r.js
+JS=$(shell find src -name "*.js")
+JS_HINT= ./node_modules/jslint/bin/jslint.js
+REQUIRE_JS=./node_modules/requirejs/bin/r.js --browser
 
-all: build build-js.js build-css.js
+all: lint build
 
 lint: $(JS)
-	jslint $<
+	@$(JS_HINT) $^
+
+build: build-js.js build-css.js
+	@cp -r img build/img
+	@cp -r lib/ckeditor build/lib/ckeditor
 
 build-js.js:
-	$(REQUIRE_JS) -o $@
+	@$(REQUIRE_JS) -o $@
 
 build-css.js:
-	$(REQUIRE_JS) -o $@
-
-build: build/img build/lib/ckeditor
-
-build/img: img
-	cp -r $< $@
-
-build/lib/ckeditor: lib/ckeditor
-	cp -r $< $@
+	@$(REQUIRE_JS) -o $@
 
 clean:
-	rm -rf build/img build/lib/ckeditor
+	@rm -rf build/img /lib/ckeditor
 
-.PHONY: clean build
+.PHONY: clean build lint

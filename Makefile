@@ -11,7 +11,7 @@ build:
 	@cp -r lib/ckeditor $@/lib
 
 lint: $(JS)
-	@$(JSLINT) $^ --nomen true --browser true --maxlen 200 --predef require --predef define --predef describe --predef it --predef runs --predef expect --predef waitsFor
+	@$(JSLINT) $^ --nomen true --browser true --todo true --maxlen 200 --predef require --predef define --predef describe --predef it --predef runs --predef expect --predef waitsFor
 
 clean:
 	@rm -rf scaffold

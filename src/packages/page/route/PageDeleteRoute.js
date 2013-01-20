@@ -1,33 +1,33 @@
 define([
-	"Ember"
-], function (Ember) {
-	"use strict";
+    "ember"
+], function (ember) {
+    "use strict";
 
-	return Ember.Route.extend({
-		route : "/:id/delete",
-		deserialize : function (router, context) {
-			return router.get("pageController").findPage(context.id);
-		},
-		serialize : function (router, context) {
-			return {
-				id : context._id
-			};
-		},
-		connectOutlets : function (router, context) {
-			router.get("pageController").set("currentPage", context);
+    return ember.route.extend({
+        route : "/:id/delete",
+        deserialize : function (router, context) {
+            return router.get("pagecontroller").findpage(context.id);
+        },
+        serialize : function (router, context) {
+            return {
+                id : context._id
+            };
+        },
+        connectoutlets : function (router, context) {
+            router.get("pagecontroller").set("currentpage", context);
 
-			router.get("pageController").connectOutlet({
-				outletName : "pageState",
-				viewClass : router.namespace.PageDeleteView,
-				controller : router.get("pageController")
-			});
+            router.get("pagecontroller").connectoutlet({
+                outletname : "pagestate",
+                viewclass : router.namespace.pagedeleteview,
+                controller : router.get("pagecontroller")
+            });
 
-			router.get("applicationController").updateTitle("page delete - " + context.get("menuTitle"));
-		},
-		confirm : function (router) {
-			router.get("pageController").deletePage();
+            router.get("applicationcontroller").updatetitle("page delete - " + context.get("menutitle"));
+        },
+        confirm : function (router) {
+            router.get("pagecontroller").deletepage();
 
-			router.transitionTo("page.index");
-		}
-	});
+            router.transitionto("page.index");
+        }
+    });
 });

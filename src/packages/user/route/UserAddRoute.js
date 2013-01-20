@@ -4,34 +4,41 @@ define([
     "use strict";
 
     return Ember.Route.extend({
-        route : "/add",
-        connectOutlets : function (router) {
-            router.get("userController").set("currentUser", Ember.Object.create());
+        renderTemplate : function () {
+            var userController = this.controllerFor("user");
 
-            router.get("userController").connectOutlet({
-                outletName : "userState",
-                viewClass : router.namespace.UserAddView,
-                controller : router.get("userController")
+            this.render("UserAddView", {
+                outlet : "userState",
+                controller : userController
             });
-
-            router.get("applicationController").updateTitle("user add");
         },
-        register : function (router, event) {
-            var div, isValid;
+        setupController : function (controller, model) {
+            var userController, applicationController;
 
-            div = event.view.$();
-            isValid = Validator.validate(div);
+            userController = this.controllerFor("user");
+            applicationController = this.controllerFor("application");
 
-            if (isValid) {
-                router.get("userController").addUser();
+            userController.set("currentUser", Ember.Object.create());
+            applicationController.updateTitle("user add");
+        },
+        events : {
+            register : function (router, event) {
+                var div, isValid;
 
-                router.transitionTo("user.index");
+                div = event.view.$();
+                isValid = Validator.validate(div);
+
+                if (isValid) {
+                    router.get("userController").addUser();
+
+                    router.transitionTo("user.index");
+                }
+            },
+            reset : function (router) {
+                router.get("userController").set("currentUser", Ember.Object.create());
+
+                Ember.$.validity.clear();
             }
-        },
-        reset : function (router) {
-            router.get("userController").set("currentUser", Ember.Object.create());
-
-            Ember.$.validity.clear();
         }
     });
 });

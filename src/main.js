@@ -37,6 +37,7 @@
             ApplicationInit : "src/packages/application/ApplicationInit",
             // Routes
             ApplicationRoute : "src/packages/application/route/ApplicationRoute",
+            IndexRoute : "src/packages/application/route/IndexRoute",
             // Controllers
             ApplicationController : "src/packages/application/controller/ApplicationController",
             LoginController : "src/packages/application/controller/LoginController",
@@ -52,6 +53,7 @@
             PageInit : "src/packages/page/PageInit",
             // Routes
             PageRoute : "src/packages/page/route/PageRoute",
+            PageIndexRoute : "src/packages/page/route/PageIndexRoute",
             PageAddRoute : "src/packages/page/route/PageAddRoute",
             PageShowRoute : "src/packages/page/route/PageShowRoute",
             PageEditRoute : "src/packages/page/route/PageEditRoute",
@@ -76,6 +78,7 @@
             UserInit : "src/packages/user/UserInit",
             // Routes
             UserRoute : "src/packages/user/route/UserRoute",
+            UserIndexRoute : "src/packages/user/route/UserIndexRoute",
             UserSearchRoute : "src/packages/user/route/UserSearchRoute",
             UserAddRoute : "src/packages/user/route/UserAddRoute",
             UserShowRoute : "src/packages/user/route/UserShowRoute",

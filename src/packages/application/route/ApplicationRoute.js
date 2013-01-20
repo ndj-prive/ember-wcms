@@ -1,49 +1,50 @@
 define([
-    "Ember", "PageRoute", "UserRoute"
-], function (Ember, PageRoute, UserRoute) {
+    "Ember"
+], function (Ember) {
     "use strict";
 
     return Ember.Route.extend({
-        route : "/",
-        connectOutlets : function (router) {
-            router.get("applicationController").connectOutlet({
-                outletName : "login",
-                name : "login"
+        renderTemplate : function () {
+            var applicationController, loginController;
+
+            applicationController = this.controllerFor("application");
+            loginController = this.controllerFor("login");
+
+            this.render("LoginView", {
+                outlet : "login",
+                controller : loginController
             });
 
-            router.get("loginController").checkSession();
-
-            router.get("applicationController").connectControllers("login");
-
-            router.get("applicationController").connectOutlet({
-                outletName : "adminNavigation",
-                viewClass : router.namespace.AdminNavigationView,
-                controller : router.get("applicationController")
+            this.render("AdminNavigationView", {
+                outlet : "adminNavigation",
+                controller : applicationController
             });
 
-            router.get("applicationController").connectOutlet({
-                outletName : "loading",
-                viewClass : router.namespace.LoadingView,
-                controller : router.get("applicationController")
+            this.render("LoadingView", {
+                outlet : "loading",
+                controller : applicationController
             });
+        },
+        setupController : function (controller, model) {
+            var applicationController, loginController;
 
-            router.get("applicationController").updateTitle("application");
-        },
-        index : Ember.Route.extend({
-            route : "/",
-            redirectsTo : "page.index"
-        }),
-        login : function (router) {
-            router.get("loginController").login();
-        },
-        logout : function (router) {
-            router.get("loginController").logout();
+            applicationController = this.controllerFor("application");
+            loginController = this.controllerFor("login");
 
-            router.transitionTo("page.index");
+            applicationController.set("loginController", loginController);
+            loginController.checkSession();
+
+            applicationController.updateTitle("application");
         },
-        gotoPages : Ember.Router.transitionTo("page.index"),
-        page : PageRoute,
-        gotoUsers : Ember.Router.transitionTo("user.index"),
-        user : UserRoute
+        events : {
+            login : function (router) {
+                router.get("loginController").login();
+            },
+            logout : function (router) {
+                router.get("loginController").logout();
+
+                router.transitionTo("page.index");
+            }
+        }
     });
 });

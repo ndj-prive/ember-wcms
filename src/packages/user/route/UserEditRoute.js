@@ -4,53 +4,57 @@ define([
     "use strict";
 
     return Ember.Route.extend({
-        route : "/:id/edit",
-        deserialize : function (router, context) {
-            return router.get("userController").findUser(context.id);
+        model : function (params) {
+            return this.controllerFor("user").findUser(params.id);
         },
-        serialize : function (router, context) {
-            return {
-                id : context._id
-            };
+        serialize : function (model, params) {
+            return model._id;
         },
         originalUser : null,
-        connectOutlets : function (router, context) {
-            this.set("originalUser", context);
+        renderTemplate : function () {
+            var userController = this.controllerFor("user");
 
-            var tempUser = Ember.Object.create(this.get("originalUser"));
-
-            router.get("userController").set("currentUser", tempUser);
-
-            router.get("userController").connectOutlet({
-                outletName : "userState",
-                viewClass : router.namespace.UserEditView,
-                controller : router.get("userController")
+            this.render("UserEditView", {
+                outlet : "userState",
+                controller : userController
             });
-
-            router.get("applicationController").updateTitle("user edit - " + context.get("name"));
         },
-        save : function (router, event) {
-            var div, isValid;
+        setupController : function (controller, model) {
+            var userController, applicationController, tempUser;
 
-            div = event.view.$();
-            isValid = Validator.validate(div);
+            userController = this.controllerFor("user");
+            applicationController = this.controllerFor("application");
 
-            if (isValid) {
-                this.get("originalUser").setProperties(router.get("userController").get("currentUser"));
+            this.set("originalUser", model);
+            tempUser = Ember.Object.create(this.get("originalUser"));
+            userController.set("currentUser", tempUser);
 
-                router.get("userController").set("currentUser", this.get("originalUser"));
+            applicationController.updateTitle("user edit - " + model.get("name"));
+        },
+        events : {
+            save : function (router, event) {
+                var div, isValid;
 
-                router.get("userController").editUser();
+                div = event.view.$();
+                isValid = Validator.validate(div);
 
-                router.transitionTo("user.index");
+                if (isValid) {
+                    this.get("originalUser").setProperties(router.get("userController").get("currentUser"));
+
+                    router.get("userController").set("currentUser", this.get("originalUser"));
+
+                    router.get("userController").editUser();
+
+                    router.transitionTo("user.index");
+                }
+            },
+            reset : function (router) {
+                var tempUser = Ember.Object.create(this.get("originalUser"));
+
+                router.get("userController").set("currentUser", tempUser);
+
+                Ember.$.validity.clear();
             }
-        },
-        reset : function (router) {
-            var tempUser = Ember.Object.create(this.get("originalUser"));
-
-            router.get("userController").set("currentUser", tempUser);
-
-            Ember.$.validity.clear();
         }
     });
 });

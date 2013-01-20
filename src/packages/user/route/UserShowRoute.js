@@ -4,25 +4,28 @@ define([
     "use strict";
 
     return Ember.Route.extend({
-        route : "/:id",
-        deserialize : function (router, context) {
-            return router.get("userController").findUser(context.id);
+        model : function (params) {
+            return this.controllerFor("user").findUser(params.id);
         },
-        serialize : function (router, context) {
-            return {
-                id : context._id
-            };
+        serialize : function (model, params) {
+            return model._id;
         },
-        connectOutlets : function (router, context) {
-            router.get("userController").set("currentUser", context);
+        renderTemplate : function () {
+            var userController = this.controllerFor("user");
 
-            router.get("userController").connectOutlet({
-                outletName : "userState",
-                viewClass : router.namespace.UserShowView,
-                controller : router.get("userController")
+            this.render("UserShowView", {
+                outlet : "userState",
+                controller : userController
             });
+        },
+        setupController : function (controller, model) {
+            var userController, applicationController;
 
-            router.get("applicationController").updateTitle("user - " + context.get("name"));
+            userController = this.controllerFor("user");
+            applicationController = this.controllerFor("application");
+
+            userController.set("currentUser", model);
+            applicationController.updateTitle("user - " + model.get("name"));
         }
     });
 });

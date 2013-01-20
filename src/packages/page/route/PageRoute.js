@@ -1,56 +1,50 @@
 define([
-    "Ember", "PageAddRoute", "PageShowRoute", "PageEditRoute", "PageDeleteRoute"
-], function (Ember, PageAddRoute, PageShowRoute, PageEditRoute, PageDeleteRoute) {
+    "Ember"
+], function (Ember) {
     "use strict";
 
     return Ember.Route.extend({
-        route : "/page",
-        connectOutlets : function (router) {
-            router.get("applicationController").connectOutlet({
-                outletName : "applicationState",
-                name : "page"
+        renderTemplate : function () {
+            var pageController = this.controllerFor("page");
+
+            this.render("PageView", {
+                outlet : "applicationState",
+                controller : pageController
             });
+
+            this.render("MenuView", {
+                outlet : "menu",
+                controller : pageController
+            });
+
+            this.render("PageAddLinkView", {
+                outlet : "pageAddLink",
+                controller : pageController
+            });
+        },
+        setupController : function (controller, model) {
+            var pageController, applicationController, pages;
+
+            pageController = this.controllerFor("page");
+            applicationController = this.controllerFor("application");
+            pages = pageController.getPages();
 
             // TODO: PageController vullen met findAll()! (Ember-data)
-            router.get("pageController").loadPages();
+            pageController.set("content", pages);
+            pageController.set("applicationController", applicationController);
 
-            router.get("pageController").connectControllers("application");
-
-            router.get("pageController").connectOutlet({
-                outletName : "menu",
-                viewClass : router.namespace.MenuView,
-                controller : router.get("pageController")
-            });
-            router.get("pageController").connectOutlet({
-                outletName : "pageAddLink",
-                viewClass : router.namespace.PageAddLinkView,
-                controller : router.get("pageController")
-            });
+            //pageController.connectControllers("application");
         },
-        index : Ember.Route.extend({
-            route : "/",
-            connectOutlets : function (router) {
-                router.get("pageController").loadPages();
+        events : {
+            saveRenameMenuTitle : function (router, event) {
+                var page = event.context;
 
-                router.transitionTo("page.show", router.get("pageController").getIndexPage());
+                router.get("pageController").editPage(page);
+
+                if (page === router.get("pageController.currentPage")) {
+                    router.get("applicationController").updateTitle(page.get("menuTitle"));
+                }
             }
-        }),
-        gotoAdd : Ember.Route.transitionTo("page.add"),
-        add : PageAddRoute,
-        gotoShow : Ember.Route.transitionTo("page.show"),
-        show : PageShowRoute,
-        gotoEdit : Ember.Route.transitionTo("page.edit"),
-        edit : PageEditRoute,
-        saveRenameMenuTitle : function (router, event) {
-            var page = event.context;
-
-            router.get("pageController").editPage(page);
-
-            if (page === router.get("pageController.currentPage")) {
-                router.get("applicationController").updateTitle(page.get("menuTitle"));
-            }
-        },
-        gotoDelete : Ember.Route.transitionTo("page.deletE"),
-        deletE : PageDeleteRoute
+        }
     });
 });

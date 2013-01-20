@@ -4,49 +4,29 @@ define([
     "use strict";
 
     return Ember.Route.extend({
-        route : "/:id/add",
-        deserialize : function (router, context) {
-            return router.get("pageController").findPage(context.id);
+        model : function (params) {
+            return this.controllerFor("page").findPage(params.id);
         },
-        serialize : function (router, context) {
-            return {
-                id : context._id
-            };
+        serialize : function (model, params) {
+            return model._id;
         },
         parentPage : null,
-        connectOutlets : function (router, context) {
-            this.set("parentPage", context);
+        renderTemplate : function () {
+            var pageController = this.controllerFor("page");
 
-            router.get("pageController").set("currentPage", Ember.Object.create({
-                content : "<p>Edit me!</p>",
-                menuTitle : "",
-                name : "",
-                isHidden : false,
-                parent : this.get("parentPage._id")
-            }));
-
-            router.get("pageController").connectOutlet({
-                outletName : "pageState",
-                viewClass : router.namespace.PageAddView,
-                controller : router.get("pageController")
+            this.render("PageAddView", {
+                outlet : "pageState",
+                controller : pageController
             });
-
-            router.get("applicationController").updateTitle("page add");
         },
-        add : function (router, event) {
-            var div, isValid;
+        setupController : function (controller, model) {
+            var pageController, applicationController;
 
-            div = event.view.$();
-            isValid = Validator.validate(div);
+            pageController = this.controllerFor("page");
+            applicationController = this.controllerFor("application");
 
-            if (isValid) {
-                router.get("pageController").addPage();
-
-                router.transitionTo("page.show", router.get("pageController.currentPage"));
-            }
-        },
-        reset : function (router) {
-            router.get("pageController").set("currentPage", Ember.Object.create({
+            this.set("parentPage", model);
+            pageController.set("currentPage", Ember.Object.create({
                 content : "<p>Edit me!</p>",
                 menuTitle : "",
                 name : "",
@@ -54,7 +34,32 @@ define([
                 parent : this.get("parentPage._id")
             }));
 
-            Ember.$.validity.clear();
+            applicationController.updateTitle("page add");
+        },
+        events : {
+            add : function (router, event) {
+                var div, isValid;
+
+                div = event.view.$();
+                isValid = Validator.validate(div);
+
+                if (isValid) {
+                    router.get("pageController").addPage();
+
+                    router.transitionTo("page.show", router.get("pageController.currentPage"));
+                }
+            },
+            reset : function (router) {
+                router.get("pageController").set("currentPage", Ember.Object.create({
+                    content : "<p>Edit me!</p>",
+                    menuTitle : "",
+                    name : "",
+                    isHidden : false,
+                    parent : this.get("parentPage._id")
+                }));
+
+                Ember.$.validity.clear();
+            }
         }
     });
 });

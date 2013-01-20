@@ -1,33 +1,38 @@
 define([
-    "ember"
-], function (ember) {
+    "Ember"
+], function (Ember) {
     "use strict";
 
-    return ember.route.extend({
-        route : "/:id/delete",
-        deserialize : function (router, context) {
-            return router.get("pagecontroller").findpage(context.id);
+    return Ember.Route.extend({
+        model : function (params) {
+            return this.controllerFor("page").findPage(params.id);
         },
-        serialize : function (router, context) {
-            return {
-                id : context._id
-            };
+        serialize : function (model, params) {
+            return model._id;
         },
-        connectoutlets : function (router, context) {
-            router.get("pagecontroller").set("currentpage", context);
+        renderTemplate : function () {
+            var pageController = this.controllerFor("page");
 
-            router.get("pagecontroller").connectoutlet({
-                outletname : "pagestate",
-                viewclass : router.namespace.pagedeleteview,
-                controller : router.get("pagecontroller")
+            this.render("PageDeleteView", {
+                outlet : "pageState",
+                controller : pageController
             });
-
-            router.get("applicationcontroller").updatetitle("page delete - " + context.get("menutitle"));
         },
-        confirm : function (router) {
-            router.get("pagecontroller").deletepage();
+        setupController : function (controller, model) {
+            var pageController, applicationController;
 
-            router.transitionto("page.index");
+            pageController = this.controllerFor("page");
+            applicationController = this.controllerFor("application");
+
+            pageController.set("currentPage", model);
+            applicationController.updateTitle("page delete - " + model.get("menuTitle"));
+        },
+        events : {
+            confirm : function (router) {
+                router.get("pageController").deletePage();
+
+                router.transitionTo("page.index");
+            }
         }
     });
 });

@@ -4,53 +4,57 @@ define([
     "use strict";
 
     return Ember.Route.extend({
-        route : "/:id/edit",
-        deserialize : function (router, context) {
-            return router.get("pageController").findPage(context.id);
+        model : function (params) {
+            return this.controllerFor("page").findPage(params.id);
         },
-        serialize : function (router, context) {
-            return {
-                id : context._id
-            };
+        serialize : function (model, params) {
+            return model._id;
         },
         originalPage : null,
-        connectOutlets : function (router, context) {
-            this.set("originalPage", context);
+        renderTemplate : function () {
+            var pageController = this.controllerFor("page");
 
-            var tempPage = Ember.Object.create(this.get("originalPage"));
-
-            router.get("pageController").set("currentPage", tempPage);
-
-            router.get("pageController").connectOutlet({
-                outletName : "pageState",
-                viewClass : router.namespace.PageEditView,
-                controller : router.get("pageController")
+            this.render("PageEditView", {
+                outlet : "pageState",
+                controller : pageController
             });
-
-            router.get("applicationController").updateTitle("page edit - " + context.get("menuTitle"));
         },
-        save : function (router, event) {
-            var div, isValid;
+        setupController : function (controller, model) {
+            var pageController, applicationController, tempPage;
 
-            div = event.view.$();
-            isValid = Validator.validate(div);
+            pageController = this.controllerFor("page");
+            applicationController = this.controllerFor("application");
 
-            if (isValid) {
-                this.get("originalPage").setProperties(router.get("pageController").get("currentPage"));
+            this.set("originalPage", model);
+            tempPage = Ember.Object.create(this.get("originalPage"));
+            pageController.set("currentPage", tempPage);
 
-                router.get("pageController").set("currentPage", this.get("originalPage"));
+            applicationController.updateTitle("page edit - " + model.get("menuTitle"));
+        },
+        events : {
+            save : function (router, event) {
+                var div, isValid;
 
-                router.get("pageController").editPage();
+                div = event.view.$();
+                isValid = Validator.validate(div);
 
-                router.transitionTo("page.show", router.get("pageController.currentPage"));
+                if (isValid) {
+                    this.get("originalPage").setProperties(router.get("pageController").get("currentPage"));
+
+                    router.get("pageController").set("currentPage", this.get("originalPage"));
+
+                    router.get("pageController").editPage();
+
+                    router.transitionTo("page.show", router.get("pageController.currentPage"));
+                }
+            },
+            reset : function (router) {
+                var tempPage = Ember.Object.create(this.get("originalPage"));
+
+                router.get("pageController").set("currentPage", tempPage);
+
+                Ember.$.validity.clear();
             }
-        },
-        reset : function (router) {
-            var tempPage = Ember.Object.create(this.get("originalPage"));
-
-            router.get("pageController").set("currentPage", tempPage);
-
-            Ember.$.validity.clear();
         }
     });
 });

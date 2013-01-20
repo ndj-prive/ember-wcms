@@ -4,28 +4,33 @@ define([
     "use strict";
 
     return Ember.Route.extend({
-        route : "/:id",
-        deserialize : function (router, context) {
-            return router.get("pageController").findPage(context.id);
+        model : function (params) {
+            return this.controllerFor("page").findPage(params.id);
         },
-        serialize : function (router, context) {
-            return {
-                id : context._id
-            };
+        serialize : function (model, params) {
+            return model.get("_id");
         },
-        connectOutlets : function (router, context) {
-            router.get("pageController").showPage(context);
+        renderTemplate : function () {
+            var pageController = this.controllerFor("page");
 
-            router.get("pageController").connectOutlet({
-                outletName : "pageState",
-                viewClass : router.namespace.PageShowView,
-                controller : router.get("pageController")
+            this.render("PageShowView", {
+                outlet : "pageState",
+                controller : pageController
             });
-
-            router.get("applicationController").updateTitle(context.get("menuTitle"));
         },
-        save : function (router) {
-            router.get("pageController").editPage();
+        setupController : function (controller, model) {
+            var pageController, applicationController;
+
+            pageController = this.controllerFor("page");
+            applicationController = this.controllerFor("application");
+
+            pageController.showPage(model);
+            applicationController.updateTitle(model.get("menuTitle"));
+        },
+        events : {
+            save : function (router) {
+                router.get("pageController").editPage();
+            }
         }
     });
 });

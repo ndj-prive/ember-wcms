@@ -35,7 +35,7 @@ define([
 
             // TODO: Fix voor asynchroon toevoegen van pagina! Met
             // Ember-Data zou dit opgelost moeten zijn
-            Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
+            // Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
             Ember.$.ajaxSetup({
                 async : false
             });
@@ -48,7 +48,7 @@ define([
 
             // TODO: Fix voor asynchroon toevoegen van pagina! Met
             // Ember-Data zou dit opgelost moeten zijn
-            Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
+            // Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
             Ember.$.ajaxSetup({
                 async : true
             });

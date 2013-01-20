@@ -7,12 +7,14 @@ define([
         applicationController : null,
         isLoggedInBinding : "applicationController.isLoggedIn",
         currentPage : null,
-        loadPages : function () {
-            var self = this;
+        getPages : function () {
+            var self, newContent;
+
+            self = this;
 
             // TODO: Fix voor asynchroon opvullen van de pagina's! Met
             // Ember-Data zou dit opgelost moeten zijn
-            Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
+            // Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
             Ember.$.ajaxSetup({
                 async : false
             });
@@ -20,7 +22,7 @@ define([
             Ember.$.couch.db("pages").allDocs({
                 include_docs : true,
                 success : function (data) {
-                    var newContent, i, menuItem;
+                    var i, menuItem;
 
                     newContent = [];
 
@@ -29,17 +31,17 @@ define([
 
                         newContent.pushObject(Ember.Object.create(menuItem));
                     }
-
-                    self.set("content", newContent);
                 }
             });
 
             // TODO: Fix voor asynchroon opvullen van de pagina's! Met
             // Ember-Data zou dit opgelost moeten zijn
-            Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
+            // Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
             Ember.$.ajaxSetup({
                 async : true
             });
+
+            return newContent;
         },
         addPage : function () {
             var self, page;
@@ -49,7 +51,7 @@ define([
 
             // TODO: Fix voor asynchroon toevoegen van pagina! Met
             // Ember-Data zou dit opgelost moeten zijn
-            Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
+            // Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
             Ember.$.ajaxSetup({
                 async : false
             });
@@ -62,7 +64,7 @@ define([
 
             // TODO: Fix voor asynchroon toevoegen van pagina! Met
             // Ember-Data zou dit opgelost moeten zijn
-            Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
+            // Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
             Ember.$.ajaxSetup({
                 async : true
             });
@@ -85,7 +87,7 @@ define([
 
             // TODO: Fix voor asynchroon toevoegen van pagina! Met
             // Ember-Data zou dit opgelost moeten zijn
-            Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
+            // Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
             Ember.$.ajaxSetup({
                 async : false
             });
@@ -98,7 +100,7 @@ define([
 
             // TODO: Fix voor asynchroon toevoegen van pagina! Met
             // Ember-Data zou dit opgelost moeten zijn
-            Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
+            // Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
             Ember.$.ajaxSetup({
                 async : true
             });
@@ -153,6 +155,10 @@ define([
             return this.findProperty("name", "root");
         }).property("content.@each.name"),
         getIndexPage : function () {
+            if (this.get("length") === 0) {
+                this.set("content", this.getPages());
+            }
+
             return this.findProperty("name", "index");
         },
         get404Page : function () {
@@ -162,7 +168,7 @@ define([
             // TODO: Fix omdat deserialize eerder opgeroepen wordt dan
             // loadingPages! Ember-data lost dit op.
             if (this.get("length") === 0) {
-                this.loadPages();
+                this.set("content", this.getPages());
             }
 
             var aPage = this.findProperty("_id", id);

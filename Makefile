@@ -1,17 +1,17 @@
-JS=$(shell find src -name "*.js")
-JS_LINT=./node_modules/jslint/bin/jslint.js --nomen true --browser true --maxlen 200 --predef require --predef define --predef describe --predef it --predef runs --predef expect --predef waitsFor
-REQUIRE_JS=./node_modules/requirejs/bin/r.js
+JS = $(shell find src -name "*.js")
+JSLINT = ./node_modules/jslint/bin/jslint.js
+REQUIREJS = ./node_modules/requirejs/bin/r.js
 
 build:
-	@$(REQUIRE_JS) -o build-js.js
-	@$(REQUIRE_JS) -o build-css.js
+	@$(REQUIREJS) -o build-js.js
+	@$(REQUIREJS) -o build-css.js
 	@rm -rf $@
 	@cp -r example $@
 	@cp -r img $@
 	@cp -r lib/ckeditor $@/lib
 
 lint: $(JS)
-	@$(JS_LINT) $^
+	@$(JSLINT) $^ --nomen true --browser true --maxlen 200 --predef require --predef define --predef describe --predef it --predef runs --predef expect --predef waitsFor
 
 clean:
 	@rm -rf scaffold

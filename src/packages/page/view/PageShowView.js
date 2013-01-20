@@ -13,9 +13,9 @@ define([
         willDestroyElement : function () {
             this.disableEditor();
         },
-        whenIsLoggedInChanged : function () {
+        whenIsLoggedInChanged : Ember.observer(function () {
             this.rerender();
-        }.observes("controller.isLoggedIn"),
+        }).observes("controller.isLoggedIn"),
         enableEditor : function () {
             if (this.get("controller.isLoggedIn")) {
                 Editor.inline("pageContentEditor");

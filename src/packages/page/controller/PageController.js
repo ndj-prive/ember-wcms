@@ -1,177 +1,177 @@
 define([
-	"Ember"
+    "Ember"
 ], function (Ember) {
-	"use strict";
+    "use strict";
 
-	return Ember.ArrayController.extend({
-		applicationController : null,
-		isLoggedInBinding : "applicationController.isLoggedIn",
-		currentPage : null,
-		loadPages : function () {
-			var self = this;
+    return Ember.ArrayController.extend({
+        applicationController : null,
+        isLoggedInBinding : "applicationController.isLoggedIn",
+        currentPage : null,
+        loadPages : function () {
+            var self = this;
 
-			// TODO: Fix voor asynchroon opvullen van de pagina's! Met
-			// Ember-Data zou dit opgelost moeten zijn
-			Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
-			Ember.$.ajaxSetup({
-				async : false
-			});
+            // TODO: Fix voor asynchroon opvullen van de pagina's! Met
+            // Ember-Data zou dit opgelost moeten zijn
+            Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
+            Ember.$.ajaxSetup({
+                async : false
+            });
 
-			Ember.$.couch.db("pages").allDocs({
-				include_docs : true,
-				success : function (data) {
-					var newContent, i, menuItem;
+            Ember.$.couch.db("pages").allDocs({
+                include_docs : true,
+                success : function (data) {
+                    var newContent, i, menuItem;
 
-					newContent = [];
+                    newContent = [];
 
-					for (i = 0; i < data.rows.length; i += 1) {
-						menuItem = data.rows[i].doc;
+                    for (i = 0; i < data.rows.length; i += 1) {
+                        menuItem = data.rows[i].doc;
 
-						newContent.pushObject(Ember.Object.create(menuItem));
-					}
+                        newContent.pushObject(Ember.Object.create(menuItem));
+                    }
 
-					self.set("content", newContent);
-				}
-			});
+                    self.set("content", newContent);
+                }
+            });
 
-			// TODO: Fix voor asynchroon opvullen van de pagina's! Met
-			// Ember-Data zou dit opgelost moeten zijn
-			Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
-			Ember.$.ajaxSetup({
-				async : true
-			});
-		},
-		addPage : function () {
-			var self, page;
+            // TODO: Fix voor asynchroon opvullen van de pagina's! Met
+            // Ember-Data zou dit opgelost moeten zijn
+            Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
+            Ember.$.ajaxSetup({
+                async : true
+            });
+        },
+        addPage : function () {
+            var self, page;
 
-			self = this;
-			page = this.get("currentPage");
+            self = this;
+            page = this.get("currentPage");
 
-			// TODO: Fix voor asynchroon toevoegen van pagina! Met
-			// Ember-Data zou dit opgelost moeten zijn
-			Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
-			Ember.$.ajaxSetup({
-				async : false
-			});
+            // TODO: Fix voor asynchroon toevoegen van pagina! Met
+            // Ember-Data zou dit opgelost moeten zijn
+            Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
+            Ember.$.ajaxSetup({
+                async : false
+            });
 
-			Ember.$.couch.db("pages").saveDoc(page, {
-				success : function (data) {
-					self.pushObject(page);
-				}
-			});
+            Ember.$.couch.db("pages").saveDoc(page, {
+                success : function (data) {
+                    self.pushObject(page);
+                }
+            });
 
-			// TODO: Fix voor asynchroon toevoegen van pagina! Met
-			// Ember-Data zou dit opgelost moeten zijn
-			Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
-			Ember.$.ajaxSetup({
-				async : true
-			});
-		},
-		editPage : function (page) {
-			if (page === undefined) {
-				page = this.get("currentPage");
-			}
+            // TODO: Fix voor asynchroon toevoegen van pagina! Met
+            // Ember-Data zou dit opgelost moeten zijn
+            Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
+            Ember.$.ajaxSetup({
+                async : true
+            });
+        },
+        editPage : function (page) {
+            if (page === undefined) {
+                page = this.get("currentPage");
+            }
 
-			// TODO: Delete children pages property so it doesn't get saved to
-			// the database
-			delete page.children;
-			Ember.$.couch.db("pages").saveDoc(page);
-		},
-		deletePage : function () {
-			var self, page;
+            // TODO: Delete children pages property so it doesn't get saved to
+            // the database
+            delete page.children;
+            Ember.$.couch.db("pages").saveDoc(page);
+        },
+        deletePage : function () {
+            var self, page;
 
-			self = this;
-			page = this.get("currentPage");
+            self = this;
+            page = this.get("currentPage");
 
-			// TODO: Fix voor asynchroon toevoegen van pagina! Met
-			// Ember-Data zou dit opgelost moeten zijn
-			Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
-			Ember.$.ajaxSetup({
-				async : false
-			});
+            // TODO: Fix voor asynchroon toevoegen van pagina! Met
+            // Ember-Data zou dit opgelost moeten zijn
+            Ember.App.router.applicationController.incrementProperty("amountOfLoaders");
+            Ember.$.ajaxSetup({
+                async : false
+            });
 
-			Ember.$.couch.db("pages").removeDoc(page, {
-				success : function (data) {
-					self.removeObject(page);
-				}
-			});
+            Ember.$.couch.db("pages").removeDoc(page, {
+                success : function (data) {
+                    self.removeObject(page);
+                }
+            });
 
-			// TODO: Fix voor asynchroon toevoegen van pagina! Met
-			// Ember-Data zou dit opgelost moeten zijn
-			Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
-			Ember.$.ajaxSetup({
-				async : true
-			});
-		},
-		showPage : function (page) {
-			var self = this;
+            // TODO: Fix voor asynchroon toevoegen van pagina! Met
+            // Ember-Data zou dit opgelost moeten zijn
+            Ember.App.router.applicationController.decrementProperty("amountOfLoaders");
+            Ember.$.ajaxSetup({
+                async : true
+            });
+        },
+        showPage : function (page) {
+            var self = this;
 
-			Ember.$.couch.db("pages").openDoc(page.get("_id"), {
-				success : function (data) {
-					page.setProperties(data);
-				}
-			});
+            Ember.$.couch.db("pages").openDoc(page.get("_id"), {
+                success : function (data) {
+                    page.setProperties(data);
+                }
+            });
 
-			self.set("currentPage", page);
-		},
-		visiblePages : function () {
-			var visiblePages, rootPageArray, initChildrenRecursively;
+            self.set("currentPage", page);
+        },
+        visiblePages : Ember.computed(function () {
+            var visiblePages, rootPageArray, initChildrenRecursively;
 
-			visiblePages = this.get("content");
+            visiblePages = this.get("content");
 
-			if (!this.get("isLoggedIn")) {
-				visiblePages = this.filterProperty("isHidden", false);
-			}
+            if (!this.get("isLoggedIn")) {
+                visiblePages = this.filterProperty("isHidden", false);
+            }
 
-			rootPageArray = visiblePages.filterProperty("parent", null);
+            rootPageArray = visiblePages.filterProperty("parent", null);
 
-			initChildrenRecursively = function (pages, pageList) {
-				var i, page, children;
+            initChildrenRecursively = function (pages, pageList) {
+                var i, page, children;
 
-				for (i = 0; i < pages.length; i += 1) {
-					page = pages[i];
-					children = pageList.filterProperty("parent", page.get("_id"));
-					page.set("children", children);
+                for (i = 0; i < pages.length; i += 1) {
+                    page = pages[i];
+                    children = pageList.filterProperty("parent", page.get("_id"));
+                    page.set("children", children);
 
-					initChildrenRecursively(children, pageList);
-				}
-			};
+                    initChildrenRecursively(children, pageList);
+                }
+            };
 
-			initChildrenRecursively(rootPageArray, visiblePages);
+            initChildrenRecursively(rootPageArray, visiblePages);
 
-			return rootPageArray[0].get("children");
-		}.property("isLoggedIn", "content.@each.isHidden", "content.@each.parent"),
-		otherPages : function () {
-			var self, otherPages;
-			self = this;
-			otherPages = this.get("content").filter(function (page) {
-				return page.get("_id") !== self.get("currentPage._id");
-			});
-			return otherPages;
-		}.property("content", "currentPage"),
-		rootPage : function () {
-			return this.findProperty("name", "root");
-		}.property("content.@each.name"),
-		getIndexPage : function () {
-			return this.findProperty("name", "index");
-		},
-		get404Page : function () {
-			return this.findProperty("name", "404");
-		},
-		findPage : function (id) {
-			// TODO: Fix omdat deserialize eerder opgeroepen wordt dan
-			// loadingPages! Ember-data lost dit op.
-			if (this.get("length") === 0) {
-				this.loadPages();
-			}
+            return rootPageArray[0].get("children");
+        }).property("isLoggedIn", "content.@each.isHidden", "content.@each.parent"),
+        otherPages : Ember.computed(function () {
+            var self, otherPages;
+            self = this;
+            otherPages = this.get("content").filter(function (page) {
+                return page.get("_id") !== self.get("currentPage._id");
+            });
+            return otherPages;
+        }).property("content", "currentPage"),
+        rootPage : Ember.computed(function () {
+            return this.findProperty("name", "root");
+        }).property("content.@each.name"),
+        getIndexPage : function () {
+            return this.findProperty("name", "index");
+        },
+        get404Page : function () {
+            return this.findProperty("name", "404");
+        },
+        findPage : function (id) {
+            // TODO: Fix omdat deserialize eerder opgeroepen wordt dan
+            // loadingPages! Ember-data lost dit op.
+            if (this.get("length") === 0) {
+                this.loadPages();
+            }
 
-			var aPage = this.findProperty("_id", id);
+            var aPage = this.findProperty("_id", id);
 
-			if (aPage === undefined) {
-				aPage = this.get404Page();
-			}
+            if (aPage === undefined) {
+                aPage = this.get404Page();
+            }
 
-			return aPage;
-		}
-	});
+            return aPage;
+        }
+    });
 });

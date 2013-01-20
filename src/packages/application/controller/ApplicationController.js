@@ -23,9 +23,9 @@ define([
             });
         },
         amountOfLoaders : 0,
-        isLoading : function () {
+        isLoading : Ember.computed(function () {
             return this.get("amountOfLoaders") > 0;
-        }.property("amountOfLoaders"),
+        }).property("amountOfLoaders"),
         updateTitle : function (title) {
             document.title = this.get("title") + title;
         }

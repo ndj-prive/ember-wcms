@@ -33,9 +33,9 @@ define([
 
             this.toggleEditor();
         },
-        whenCurrentPageChanged : function () {
+        whenCurrentPageChanged : Ember.observer(function () {
             this.rerender();
-        }.observes("controller.currentPage.content", "controller.isLoggedIn"),
+        }).observes("controller.currentPage.content", "controller.isLoggedIn"),
         toggleEditor : function () {
             // if (this.get("controller.isLoggedIn") &&
             // this.get("isEditorReady")) {

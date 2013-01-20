@@ -57,7 +57,7 @@ define([
         },
         searchText : "",
         isAllowedSearchRequest : true,
-        whenSearchTextChanged : function () {
+        whenSearchTextChanged : Ember.observer(function () {
             if (this.get("isLongEnoughSearchTerm")) {
                 var self = this;
 
@@ -76,10 +76,10 @@ define([
             } else if (this.get("length") !== 0) {
                 this.set("content", []);
             }
-        }.observes("searchText"),
-        isLongEnoughSearchTerm : function () {
+        }).observes("searchText"),
+        isLongEnoughSearchTerm : Ember.computed(function () {
             return this.get("searchText.length") >= 2;
-        }.property("searchText"),
+        }).property("searchText"),
         searchUsers : function () {
             var self = this;
 
@@ -101,8 +101,8 @@ define([
                 }
             });
         },
-        isEmptySearchResult : function () {
+        isEmptySearchResult : Ember.computed(function () {
             return this.get("length") === 0;
-        }.property("length")
+        }).property("length")
     });
 });

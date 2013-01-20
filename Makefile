@@ -1,23 +1,19 @@
 JS=$(shell find src -name "*.js")
-JS_HINT= ./node_modules/jslint/bin/jslint.js
-REQUIRE_JS=./node_modules/requirejs/bin/r.js --browser
+JS_LINT=./node_modules/jslint/bin/jslint.js --nomen true --browser true --maxlen 200 --predef require --predef define --predef describe --predef it --predef runs --predef expect --predef waitsFor
+REQUIRE_JS=./node_modules/requirejs/bin/r.js
 
-all: lint build
+build:
+	@$(REQUIRE_JS) -o build-js.js
+	@$(REQUIRE_JS) -o build-css.js
+	@rm -rf $@
+	@cp -r example $@
+	@cp -r img $@
+	@cp -r lib/ckeditor $@/lib
 
 lint: $(JS)
-	@$(JS_HINT) $^
-
-build: build-js.js build-css.js
-	@cp -r img build/img
-	@cp -r lib/ckeditor build/lib/ckeditor
-
-build-js.js:
-	@$(REQUIRE_JS) -o $@
-
-build-css.js:
-	@$(REQUIRE_JS) -o $@
+	@$(JS_LINT) $^
 
 clean:
-	@rm -rf build/img /lib/ckeditor
+	@rm -rf scaffold
 
 .PHONY: clean build lint

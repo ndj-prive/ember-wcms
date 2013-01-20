@@ -1,26 +1,26 @@
+JS = $(shell find lib -name "*.js")
+REQUIRE_JS = node ./node_modules/requirejs/bin/r.js
+
 all: build build-js.js build-css.js
 
-# optimize with require.js optimizer
-build-js.js:
-	node r.js -o $@
+lint: $(JS)
+	jslint $<
 
-# optimize with require.js optimizer
+build-js.js:
+	$(REQUIRE_JS) -o $@
+
 build-css.js:
-	node r.js -o $@
+	$(REQUIRE_JS) -o $@
 
 build: build/img build/lib/ckeditor
 
-
 build/img: img
-	mkdir -p build
 	cp -r $< $@
 
 build/lib/ckeditor: lib/ckeditor
-	mkdir -p build
-	mkdir -p build/lib
 	cp -r $< $@
 
 clean:
-	rm -rf build
+	rm -rf build/img build/lib/ckeditor
 
-.PHONY: clean
+.PHONY: clean build

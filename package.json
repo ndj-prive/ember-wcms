@@ -1,0 +1,10 @@
+{
+  "name": "ember-wcms",
+  "version": "0.0.1",
+  "description": "",
+  "license": "MIT",
+  "dependencies": {
+    "jslint": "~0.1.9",
+    "requirejs": "~2.1.2"
+  }
+}

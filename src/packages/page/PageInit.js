@@ -1,6 +1,8 @@
 define([
-    "Ember", "PageController", "PageView", "MenuView", "PageAddView", "PageAddLinkView", "PageShowView", "PageEditView", "PageDeleteView", "PageRoute", "PageIndexRoute", "PageAddRoute", "PageShowRoute", "PageEditRoute", "PageDeleteRoute"
-], function (Ember, PageController, PageView, MenuView, PageAddView, PageAddLinkView, PageShowView, PageEditView, PageDeleteView, PageRoute, PageIndexRoute, PageAddRoute, PageShowRoute, PageEditRoute, PageDeleteRoute) {
+    "Ember", "PageController", "PageView", "MenuView", "PageAddView", "PageAddLinkView", "PageShowView", "PageEditView", "PageDeleteView", "PageRoute", "PageIndexRoute", "PageAddRoute",
+    "PageShowRoute", "PageEditRoute", "PageDeleteRoute"
+], function (Ember, PageController, PageView, MenuView, PageAddView, PageAddLinkView, PageShowView, PageEditView, PageDeleteView, PageRoute, PageIndexRoute, PageAddRoute,
+             PageShowRoute, PageEditRoute, PageDeleteRoute) {
     "use strict";
 
     return {

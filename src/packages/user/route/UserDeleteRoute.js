@@ -25,7 +25,7 @@ define([
             applicationController = this.controllerFor("application");
 
             userController.set("currentUser", model);
-            applicationController.updateTitle("user delete - " + context.get("name"));
+            applicationController.updateTitle("user delete - " + model.get("name"));
         },
         events : {
             confirm : function () {

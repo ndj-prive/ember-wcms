@@ -1,6 +1,8 @@
 define([
-    "Ember", "UserController", "UserView", "UserSearchView", "UserSearchInputView", "UserSearchResultView", "UserAddView", "UserShowView", "UserEditView", "UserDeleteView", "UserRoute", "UserIndexRoute", "UserSearchRoute", "UserAddRoute", "UserShowRoute", "UserEditRoute", "UserDeleteRoute"
-], function (Ember, UserController, UserView, UserSearchView, UserSearchInputView, UserSearchResultView, UserAddView, UserShowView, UserEditView, UserDeleteView, UserRoute, UserIndexRoute, UserSearchRoute, UserAddRoute, UserShowRoute, UserEditRoute, UserDeleteRoute) {
+    "Ember", "UserController", "UserView", "UserSearchView", "UserSearchInputView", "UserSearchResultView", "UserAddView", "UserShowView", "UserEditView", "UserDeleteView", "UserRoute",
+    "UserIndexRoute", "UserSearchRoute", "UserAddRoute", "UserShowRoute", "UserEditRoute", "UserDeleteRoute"
+], function (Ember, UserController, UserView, UserSearchView, UserSearchInputView, UserSearchResultView, UserAddView, UserShowView, UserEditView, UserDeleteView, UserRoute, UserIndexRoute,
+             UserSearchRoute, UserAddRoute, UserShowRoute, UserEditRoute, UserDeleteRoute) {
     "use strict";
 
     return {

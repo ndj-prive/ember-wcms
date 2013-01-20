@@ -37,20 +37,24 @@ define([
             applicationController.updateTitle("page add");
         },
         events : {
-            add : function (router, event) {
-                var div, isValid;
+            add : function (view) {
+                var div, isValid, pageController;
 
-                div = event.view.$();
+                div = view.$();
                 isValid = Validator.validate(div);
 
                 if (isValid) {
-                    router.get("pageController").addPage();
+                    pageController = this.controllerFor("page");
 
-                    router.transitionTo("page.show", router.get("pageController.currentPage"));
+                    pageController.addPage();
+
+                    this.transitionTo("page.show", pageController.get("currentPage"));
                 }
             },
-            reset : function (router) {
-                router.get("pageController").set("currentPage", Ember.Object.create({
+            reset : function () {
+                var pageController = this.controllerFor("page");
+
+                pageController.set("currentPage", Ember.Object.create({
                     content : "<p>Edit me!</p>",
                     menuTitle : "",
                     name : "",

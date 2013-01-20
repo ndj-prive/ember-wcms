@@ -32,26 +32,29 @@ define([
             applicationController.updateTitle("page edit - " + model.get("menuTitle"));
         },
         events : {
-            save : function (router, event) {
-                var div, isValid;
+            save : function (view) {
+                var div, isValid, pageController;
 
-                div = event.view.$();
+                div = view.$();
                 isValid = Validator.validate(div);
 
                 if (isValid) {
-                    this.get("originalPage").setProperties(router.get("pageController").get("currentPage"));
+                    pageController = this.controllerFor("page");
 
-                    router.get("pageController").set("currentPage", this.get("originalPage"));
+                    this.get("originalPage").setProperties(pageController.get("currentPage"));
+                    pageController.set("currentPage", this.get("originalPage"));
+                    pageController.editPage();
 
-                    router.get("pageController").editPage();
-
-                    router.transitionTo("page.show", router.get("pageController.currentPage"));
+                    this.transitionTo("page.show", pageController.get("currentPage"));
                 }
             },
-            reset : function (router) {
-                var tempPage = Ember.Object.create(this.get("originalPage"));
+            reset : function () {
+                var pageController, tempPage;
 
-                router.get("pageController").set("currentPage", tempPage);
+                pageController = this.controllerFor("page");
+                tempPage = Ember.Object.create(this.get("originalPage"));
+
+                pageController.set("currentPage", tempPage);
 
                 Ember.$.validity.clear();
             }

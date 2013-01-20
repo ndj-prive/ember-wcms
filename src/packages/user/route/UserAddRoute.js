@@ -22,20 +22,24 @@ define([
             applicationController.updateTitle("user add");
         },
         events : {
-            register : function (router, event) {
-                var div, isValid;
+            register : function (view) {
+                var div, isValid, userController;
 
-                div = event.view.$();
+                div = view.$();
                 isValid = Validator.validate(div);
 
                 if (isValid) {
-                    router.get("userController").addUser();
+                    userController = this.controllerFor("user");
 
-                    router.transitionTo("user.index");
+                    userController.addUser();
+
+                    this.transitionTo("user.index");
                 }
             },
-            reset : function (router) {
-                router.get("userController").set("currentUser", Ember.Object.create());
+            reset : function () {
+                var userController = this.controllerFor("user");
+
+                userController.set("currentUser", Ember.Object.create());
 
                 Ember.$.validity.clear();
             }

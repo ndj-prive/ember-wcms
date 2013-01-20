@@ -28,10 +28,10 @@ define([
             applicationController.updateTitle("page delete - " + model.get("menuTitle"));
         },
         events : {
-            confirm : function (router) {
-                router.get("pageController").deletePage();
+            confirm : function () {
+                this.controllerFor("page").deletePage();
 
-                router.transitionTo("page.index");
+                this.transitionTo("page.index");
             }
         }
     });

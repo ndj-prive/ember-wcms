@@ -28,8 +28,8 @@ define([
             applicationController.updateTitle(model.get("menuTitle"));
         },
         events : {
-            save : function (router) {
-                router.get("pageController").editPage();
+            save : function () {
+                this.controllerFor("page").editPage();
             }
         }
     });

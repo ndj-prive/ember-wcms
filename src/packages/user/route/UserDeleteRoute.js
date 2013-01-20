@@ -28,10 +28,10 @@ define([
             applicationController.updateTitle("user delete - " + context.get("name"));
         },
         events : {
-            confirm : function (router) {
-                router.get("userController").deleteUser();
+            confirm : function () {
+                this.controllerFor("user").deleteUser();
 
-                router.transitionTo("user.index");
+                this.transitionTo("user.index");
             }
         }
     });

@@ -18,22 +18,19 @@ define([
 
                 this.$().focus();
             },
-            insertNewline : function (event) {
-                this.saveRenameMenuTitle(event);
+            //TODO: Not AnySurfer-compliant. When pressing enter on the Rename-button in the dropdown, it immediatly invocates this event, without being able to edit the title.
+            insertNewline : function (page) {
+                this.saveRenameMenuTitle(page);
             },
-            focusOut : function (event) {
+            focusOut : function (page) {
                 if (this.get("parentView.isRenaming")) {
-                    this.saveRenameMenuTitle(event);
+                    this.saveRenameMenuTitle(page);
                 }
             },
-            saveRenameMenuTitle : function (event) {
-                var view = this.get("parentView");
+            saveRenameMenuTitle : function (page) {
+                this.get("controller.target").send("saveRenameMenuTitle", page);
 
-                event.context = view.get("content");
-
-                this.get("controller.target").send("saveRenameMenuTitle", event);
-
-                view.set("isRenaming", false);
+                this.get("parentView").set("isRenaming", false);
             }
         })
     });

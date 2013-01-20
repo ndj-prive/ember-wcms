@@ -36,13 +36,17 @@ define([
             //pageController.connectControllers("application");
         },
         events : {
-            saveRenameMenuTitle : function (router, event) {
-                var page = event.context;
+            saveRenameMenuTitle : function (page) {
+                var pageController, applicationController;
 
-                router.get("pageController").editPage(page);
+                pageController = this.controllerFor("page");
+                applicationController = this.controllerFor("application");
 
-                if (page === router.get("pageController.currentPage")) {
-                    router.get("applicationController").updateTitle(page.get("menuTitle"));
+                pageController.editPage(page);
+
+                //TODO: Is this updateTitle still required?
+                if (page === pageController.get("currentPage")) {
+                    applicationController.updateTitle(page.get("menuTitle"));
                 }
             }
         }

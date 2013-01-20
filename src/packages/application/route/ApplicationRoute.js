@@ -37,13 +37,13 @@ define([
             applicationController.updateTitle("application");
         },
         events : {
-            login : function (router) {
-                router.get("loginController").login();
+            login : function () {
+                this.controllerFor("login").login();
             },
-            logout : function (router) {
-                router.get("loginController").logout();
+            logout : function () {
+                this.controllerFor("login").logout();
 
-                router.transitionTo("page.index");
+                this.transitionTo("page.index");
             }
         }
     });

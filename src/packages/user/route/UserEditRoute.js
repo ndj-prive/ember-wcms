@@ -32,26 +32,29 @@ define([
             applicationController.updateTitle("user edit - " + model.get("name"));
         },
         events : {
-            save : function (router, event) {
-                var div, isValid;
+            save : function (view) {
+                var div, isValid, userController;
 
-                div = event.view.$();
+                div = view.$();
                 isValid = Validator.validate(div);
 
                 if (isValid) {
-                    this.get("originalUser").setProperties(router.get("userController").get("currentUser"));
+                    userController = this.controllerFor("user");
 
-                    router.get("userController").set("currentUser", this.get("originalUser"));
+                    this.get("originalUser").setProperties(userController.get("currentUser"));
+                    userController.set("currentUser", this.get("originalUser"));
+                    userController.editUser();
 
-                    router.get("userController").editUser();
-
-                    router.transitionTo("user.index");
+                    this.transitionTo("user.index");
                 }
             },
-            reset : function (router) {
-                var tempUser = Ember.Object.create(this.get("originalUser"));
+            reset : function () {
+                var userController, tempUser;
 
-                router.get("userController").set("currentUser", tempUser);
+                userController = this.controllerFor("user");
+                tempUser = Ember.Object.create(this.get("originalUser"));
+
+                userController.set("currentUser", tempUser);
 
                 Ember.$.validity.clear();
             }

@@ -5,7 +5,7 @@ define([
 
     return Ember.Route.extend({
         redirect : function () {
-            //this.transitionTo("page");
+            // TODO: Can't redirect twice? undefined? this.transitionTo("page");
             this.transitionTo("page.show", this.controllerFor("page").getIndexPage());
         }
     });

@@ -4,8 +4,8 @@
     </div>
 
     <ul class="menuItems">
-        <li><a {{action gotoAdd href=true }}>Add a user</a></li>
-        <li><a {{action gotoSearch href=true }}>Search users</a></li>
+        <li>{{#linkTo user.add}}Add a user{{/linkTo}}</li>
+        <li>{{#linkTo user.search}}Search users{{/linkTo}}</li>
     </ul>
 </div>
 

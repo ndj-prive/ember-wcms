@@ -3,11 +3,10 @@
 </p>
 
 <p>
-    <button class="btn btn-primary"
-    {{ action "confirm" }}>
+    <button class="btn btn-primary" {{action "confirm"}}>
     Confirm
     </button>
-    <a class="btn" {{ action "gotoShow" currentUser href=true }}>
+    {{#linkTo user.show currentUser class="btn"}}
     Back
-    </a>
+    {{/linkTo}}
 </p>

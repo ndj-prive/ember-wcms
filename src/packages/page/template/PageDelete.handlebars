@@ -7,11 +7,11 @@
     Are you sure you want to delete page "{{currentPage.menuTitle}}"?
 </p>
 
-<button class="btn btn-primary" {{ action "confirm" }}>
+<button class="btn btn-primary" {{action "confirm"}}>
 Confirm
 </button>
 {{/if}}
 
-<a class="btn" {{ action "gotoShow" currentPage href=true }}>
+{{#linkTo page.show currentPage class="btn"}}
 Back
-</a>
+{{/linkTo}}

@@ -4,12 +4,12 @@
 
 {{else}}
 
-<a {{ action "gotoShow" view.content href=true }}>
+{{#linkTo page.show view.content}}
 {{view.content.menuTitle}}
 {{#if view.content.isHidden}}
 [hidden]
 {{/if}}
-</a>
+{{/linkTo}}
 
 {{#if isLoggedIn}}
 
@@ -20,24 +20,24 @@
 
     <ul class="dropdown-menu" {{bindAttr aria-labelledby="view.dropDownId"}}>
     <li>
-        <a href="" {{ action "enableRenameMenuTitle" target="view" }}>
+        <a href="" {{action "enableRenameMenuTitle" target="view"}}>
         Rename
         </a>
     </li>
     <li>
-        <a {{ action "gotoAdd" view.content href=true }}>
+        {{#linkTo page.add view.content}}
         Add
-        </a>
+        {{/linkTo}}
     </li>
     <li>
-        <a {{ action "gotoEdit" view.content href=true }}>
+        {{#linkTo page.edit view.content}}
         Edit
-        </a>
+        {{/linkTo}}
     </li>
     <li>
-        <a {{ action "gotoDelete" view.content href=true }}>
+        {{#linkTo page.delete view.content}}
         Delete
-        </a>
+        {{/linkTo}}
     </li>
     </ul>
 </div>

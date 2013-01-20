@@ -45,14 +45,14 @@
     </p>
 
     <div class="controls">
-        <a class="btn btn-primary" {{ action "gotoEdit" currentUser href=true }}>
+        {{#linkTo user.edit currentUser class="btn btn-primary"}}
         Edit
-        </a>
-        <a class="btn btn-primary" {{ action "gotoDelete" currentUser href=true }}>
+        {{/linkTo}}
+        {{#linkTo user.delete currentUser class="btn btn-primary"}}
         Delete
-        </a>
-        <a class="btn" {{ action "gotoUsers" href=true }}>
+        {{/linkTo}}
+        {{#linkTo user class="btn"}}
         Back
-        </a>
+        {{/linkTo}}
     </div>
 </div>

@@ -27,9 +27,9 @@
         {{/with}}
 
         <td>
-            <a class="btn btn-small" {{ action "gotoShow" user href=true }}>
+            {{#linkTo user.show user class="btn btn-small"}}
             show
-            </a>
+            {{/linkTo}}
         </td>
     </tr>
     {{/each}}

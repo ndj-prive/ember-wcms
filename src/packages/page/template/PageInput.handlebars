@@ -36,27 +36,27 @@
     <div class="control-group">
         <div class="controls">
             {{#if view.isAdding}}
-            <button class="btn btn-primary" {{ action "add" }}>
+            <button class="btn btn-primary" {{action "add"}}>
             Add
             </button>
             {{else}}
-            <button class="btn btn-primary" {{ action "save" }}>
+            <button class="btn btn-primary" {{action "save"}}>
             Save
             </button>
             {{/if}}
 
-            <button class="btn" {{ action "reset" }}>
+            <button class="btn" {{action "reset"}}>
             Reset
             </button>
 
             {{#if view.isAdding}}
-            <a class="btn" {{ action "gotoPages" href=true }}>
+            {{#linkTo page class="btn"}}
             Back
-            </a>
+            {{/linkTo}}
             {{else}}
-            <a class="btn" {{ action "gotoShow" currentPage href=true }}>
+            {{#linkTo page.show currentPage class="btn"}}
             Back
-            </a>
+            {{/linkTo}}
             {{/if}}
         </div>
     </div>

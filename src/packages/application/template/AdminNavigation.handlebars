@@ -5,9 +5,10 @@
     </button>
 
     <ul class="dropdown-menu" aria-labelledby="adminNavigationDropdown">
-        <li><a {{ action gotoPages href=true }}>Pages</a></li>
-        <li><a {{ action gotoUsers href=true }}>Users</a></li>
-        <li><a href="" {{ action "logout" }}>Logout</a></li>
+
+        <li>{{#linkTo page}}Pages{{/linkTo}}</li>
+        <li>{{#linkTo user}}Users{{/linkTo}}</li>
+        <li><a href="" {{action "logout"}}>Logout</a></li>
     </ul>
 </div>
 {{/if}}

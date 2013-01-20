@@ -9,13 +9,13 @@
             text : "lib/require/text",
 
             // Frameworks
-            Ember : "lib/ember/ember-1.0.0-pre.2",
-            EmberData : "lib/ember/ember-data-latest",
-            EmberDataAdapter : "lib/ember/ember-couchdb-adapter-latest",
-            Handlebars : "lib/ember/handlebars-1.0.rc.1",
+            Ember : "lib/ember/ember",
+            EmberData : "lib/ember/ember-data",
+            EmberDataAdapter : "lib/ember/ember-couchdb-adapter",
+            Handlebars : "lib/ember/handlebars",
 
-            jQuery : "lib/jquery/js/jquery-1.8.3",
-            jQueryUI : "lib/jquery/js/jquery-ui-1.9.2.custom",
+            jQuery : "lib/jquery/js/jquery",
+            jQueryUI : "lib/jquery/js/jquery-ui",
             jQueryValidity : "lib/jquery/js/jquery.validity",
             jQueryCouch : "lib/jquery/js/jquery.couch",
             Bootstrap : "lib/bootstrap/js/bootstrap",

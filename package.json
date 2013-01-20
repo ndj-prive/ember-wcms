@@ -1,7 +1,7 @@
 {
     "name" : "ember-wcms",
     "version" : "0.0.1",
-    "description" : "",
+    "description" : "Web Content Management System, client-sided, made with Ember.js, stored in CouchDB.",
     "license" : "MIT",
     "dependencies" : {
         "jslint" : "~0.1.9",

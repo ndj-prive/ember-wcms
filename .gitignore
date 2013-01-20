@@ -1,3 +1,5 @@
 node_modules
-build/lib/ckeditor/
-build/img/
+#build/lib/ckeditor/
+#build/img/
+build/
+.idea/

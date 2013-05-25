@@ -6,4 +6,4 @@ ember-wcms
 - made with Ember.js
 - stored in CouchDB
 
-See the [wiki](https://github.com/madeentje/ember-wcms/wiki) for more information.
+See the [wiki](https://github.com/dimitrisuls/ember-wcms/wiki) for more information.

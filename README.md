@@ -1,3 +1,5 @@
+I'm currently taking a break from this project!! Code/workflow is not up-to-date at all.
+
 ember-wcms
 ==========
 
